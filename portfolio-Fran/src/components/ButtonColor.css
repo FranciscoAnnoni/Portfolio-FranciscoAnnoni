@@ -1,0 +1,72 @@
+
+:root{
+    --bg-color-1: #121212;
+    --bg-color-2: #FFD433;
+    --bg-color-3: #FF90E8;
+    --padding: 1rem 4rem;
+    --font-family: monospace;
+    --step: 0.5rem;
+  }
+  
+  /*   transform: translate3d(-0.5rem, -0.5rem, 0) */
+  button:is(:hover, :focus-visible) {
+    --active: 1;
+  }
+  
+  button {
+    --active: 0;
+    color: white;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: bold;
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+  
+  button span:first-of-type {
+    padding: var(--padding);
+  }
+  
+  button span:not(:first-of-type) {
+    position: absolute;
+  }
+  
+  [aria-hidden] { color: transparent; }
+  button span {
+    inset: 0;
+    display: grid;
+    background: var(--bg);
+    place-items: center;
+    transition: 0.2s ease;
+    border: 2px solid black;
+  /*   transform:
+      translate(
+        calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1)),
+        calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
+      ); */
+    translate:
+      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
+      calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
+    ;
+  }
+  
+  span:nth-of-type(1) {
+    --bg: var(--bg-color-3);
+  }
+  
+  span:nth-of-type(2) {
+    --coefficient: 1;
+    --bg: var(--bg-color-2);
+  }
+  
+  span:nth-of-type(3) {
+    --coefficient: 2;
+    --bg: var(--bg-color-1);
+  }
+  
+  button:active {
+    --active: 0.5;
+  }
