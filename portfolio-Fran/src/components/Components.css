@@ -23,38 +23,78 @@
     transition: opacity 0.2s ease, transform 0.1s ease;
   }
   
+  /*light and Dack*/
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .toggle {
+    display: none; /* Esconde el input de tipo checkbox */
+  }
+  
+  .toggle-label {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #f0f0f0;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-label::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffc107; /* Color amarillo para el Sol */
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .toggle:checked + .toggle-label {
+    background-color: #333; /* Cambia a fondo oscuro para el modo noche */
+  }
+  
+  .toggle:checked + .toggle-label::before {
+    transform: translateX(25px); /* Mueve la "luna" al lado derecho */
+    background-color: #f5f5f5; /* Color claro para la Luna */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
 
 
 /*Buton color*/
 :root{
-    --bg-color-1: #0b192e;
-    --bg-color-2: #5f7a86;
-    --bg-color-3: #0f4460;
     --padding: 1rem 4rem;
-    --font-family: monospace;
-    --step: 0.5rem;
+    --step: 0.13rem;
   }
   
-  /*   transform: translate3d(-0.5rem, -0.5rem, 0) */
   button:is(:hover, :focus-visible) {
     --active: 1;
   }
   
   button {
+    font-family:'Roboto', sans-serif;
+    border: 0;
     --active: 0;
-    color: white;
+    color:var(--foreground-color);
     border-radius: 4px;
     position: relative;
     cursor: pointer;
-    font-family: var(--font-family);
-    font-weight: bold;
-    border: 0;
     background: transparent;
     padding: 0;
   }
   
   button span:first-of-type {
-    padding: var(--padding);
+    padding: 20px 0px 0px 20px;
   }
   
   button span:not(:first-of-type) {
@@ -63,17 +103,16 @@
   
   [aria-hidden] { color: transparent; }
   button span {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--primary-font);
     inset: 0;
     display: grid;
     background: var(--bg);
     place-items: center;
-    transition: 0.2s ease;
-    border: 2px solid black;
-  /*   transform:
-      translate(
-        calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1)),
-        calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
-      ); */
+    transition: 0.25s ease;
+    border: 2px solid var(--foreground-color);
+    border-radius: 4px;
     translate:
       calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
       calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
@@ -81,19 +120,20 @@
   }
   
   span:nth-of-type(1) {
-    --bg: var(--bg-color-3);
-  }
-  
-  span:nth-of-type(2) {
-    --coefficient: 1;
-    --bg: var(--bg-color-2);
+    --bg: var(--foreground-color);
   }
   
   span:nth-of-type(3) {
     --coefficient: 2;
-    --bg: var(--bg-color-1);
+    --bg: var(--background-color);
   }
   
   button:active {
-    --active: 0.5;
+    --active: 0.43;
   }
+
+
+
+  
+  
+

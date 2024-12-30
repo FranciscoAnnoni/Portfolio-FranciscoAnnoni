@@ -7,13 +7,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .navbar-left .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--primary-text-color);
     text-decoration: none;
   }
 
@@ -21,6 +21,7 @@
   .navbar-right {
     display: flex;               /* Utiliza flexbox para alinearlos */
     justify-content: flex-end;   /* Alinea a la derecha */
+    align-items:center;
 }
 
 .nav-links {
@@ -37,7 +38,7 @@
 
 /* Estilos generales para los enlaces */
 .navbar .nav-link {
-    color: var(--white); /* Personaliza con tu color base */
+    color: var(--primary-text-color); /* Personaliza con tu color base */
     font-family: 'Mc Saatchi', sans-serif;
     font-size: 18px;
     font-weight: 900;
@@ -47,7 +48,7 @@
 }
 
 .navbar .nav-link:hover {
-    color: var(--accent-color); /* Cambia a tu color de hover */
+    color: var(--foreground-color); /* Cambia a tu color de hover */
 }
 
 /* Subrayado dinámico */
@@ -56,7 +57,7 @@
     position: absolute;
     height: 1px;
     width: 100%;
-    background: var(--accent-color); /* Personaliza con tu color de subrayado */
+    background: var(--foreground-color); /* Personaliza con tu color de subrayado */
     bottom: -5px; /* Ajusta la distancia entre texto y subrayado */
     left: 0;
     transform: scaleX(0);

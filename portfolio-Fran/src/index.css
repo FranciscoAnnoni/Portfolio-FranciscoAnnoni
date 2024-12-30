@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-
 /* Variables de temas (se aplican automáticamente a nivel root) */
 [data-theme="light"] {
+  --white: #ffffff;
   --background-color: #f8eddc;
   --primary-text-color: #0b192b;
   --foreground-color: #ed892f;
@@ -16,17 +16,12 @@
 [data-theme="dark"] {
   --background-color: #0b192b;
   --primary-text-color: #f8eddc;
-  --foreground-color: #ed892f;
-}
-
-.fontFamily {
-  font-family: "Inter", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  --foreground-color:  #ff6347;
 }
 
 :root {
+  --primary-font: "Inter", serif;
+  --second-family: 'Mc Saatchi', sans-serif;
   font-family: "Inter", serif;
   font-optical-sizing: auto;
   font-style: normal;

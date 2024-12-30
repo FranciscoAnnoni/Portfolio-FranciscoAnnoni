@@ -70,20 +70,19 @@ export const FollowMouse = () => {
 
 
 //----------------------------------------------------------------------------// Toggle de Cambio de Modo Darck a Light
-export const Toggle = ({handleChange, isChecked}) => {
-    return (
-        <div className="toggle-container">
-            <input
-            type="checkbox"
-            id="check"
-            className="toggle"
-            onChange={handleChange}
-            checked={isChecked}
-            />
-            <label htmlFor="check">Dark Mode</label>
-        </div>
-        
-    );
+export const Toggle = ({ handleChange, isChecked }) => {
+  return (
+    <div className="toggle-container">
+      <input
+        type="checkbox"
+        id="check"
+        className="toggle"
+        onChange={handleChange}
+        checked={isChecked}
+      />
+      <label htmlFor="check" className="toggle-label"></label>
+    </div>
+  );
 };
 
 //----------------------------------------------------------------------------// Boton vase de la App
@@ -93,7 +92,16 @@ export const ButtonColor = ({text}) => {
         <span aria-hidden="true">{text}</span>
         <span></span>
         <span>{text}</span>
-      </button>
+       </button>
         
     );
+};
+
+//----------------------------------------------------------------------------// Boton vase de la App
+export const ButtonNav = ({ text, href, onClick }) => {
+  return (
+    <div class="button-nav-wrapper">
+    <a class="button-nav" href="/your-link" target="_blank" rel="noopener noreferrer">{text}</a>
+    </div>
+  );
 };
