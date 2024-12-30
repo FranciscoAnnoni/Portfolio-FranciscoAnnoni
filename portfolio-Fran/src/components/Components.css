@@ -1,5 +1,6 @@
 
 /*Follow Mouse*/
+/*
 .cursor {
     position: absolute;
     width: 40px;
@@ -11,11 +12,12 @@
     background-color: transparent;
     transition: opacity 0.2s ease, transform 0.1s ease;
   }
+    */
   
   .cursor-dot {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     background-color: var(--foreground-color);
     border-radius: 50%;
     pointer-events: none;
@@ -24,51 +26,30 @@
   }
   
   /*light and Dack*/
-  .toggle-container {
+  .minimal-toggle-button {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 50px;
-  }
-  
-  .toggle {
-    display: none; /* Esconde el input de tipo checkbox */
-  }
-  
-  .toggle-label {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 25px;
-    background-color: #f0f0f0;
-    border-radius: 50px;
+    padding-top: 1px;
+    padding-left: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Tamaño del icono */
+    color: var(--icon-color, #f39c12); /* Color base del icono */
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .minimal-toggle-button:hover {
+    transform: scale(1.1); /* Pequeño efecto de zoom */
+    color: var(--icon-hover-color, #d35400); /* Color del icono al hacer hover */
   }
   
-  .toggle-label::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background-color: #ffc107; /* Color amarillo para el Sol */
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+  .icon {
+    transition: transform 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+  .iconMoon{
+    color: var(--primary-text-color);
+    font-size: 15px; /* Tamaño del icono */
   }
   
-  .toggle:checked + .toggle-label {
-    background-color: #333; /* Cambia a fondo oscuro para el modo noche */
-  }
-  
-  .toggle:checked + .toggle-label::before {
-    transform: translateX(25px); /* Mueve la "luna" al lado derecho */
-    background-color: #f5f5f5; /* Color claro para la Luna */
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-  }
 
 
 /*Buton color*/

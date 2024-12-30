@@ -1,24 +1,71 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Navbar from './components/NavBar.jsx'
 import './App.css';
 
-import { Toggle } from './components/Components.jsx';
-import { FollowMouse } from './components/Components.jsx';
-
-import Navbar from './components/NavBar.jsx'
-
-
 export const App = () => {
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(true);
+
+  // Cuando cambie isDark, aplicamos el tema correspondiente
+  useEffect(() => {
+    const theme = isDark ? "dark" : "light";
+    document.documentElement.setAttribute('data-theme', theme); // Cambiamos el tema en el <html>
+  }, [isDark]);
 
   return (
-    <>
-      <div className="App" data-theme={isDark ? "dark" : "light"}>
-        <Navbar  isChecked={isDark} handleChange={() => setIsDark(!isDark)}/>
-        <Toggle isChecked={isDark} handleChange={() => setIsDark(!isDark)}/>
-      <FollowMouse />
+    <div className="App">
+      <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
       <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      <h1 className="title">Titulo</h1>
+      {/* Agrega todo el contenido aquí */}
+      <div id="about" className="section">
+        <h2>About Section</h2>
       </div>
-    </>
+    </div>
   );
 };
-

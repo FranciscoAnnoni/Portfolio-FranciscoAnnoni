@@ -1,8 +1,3 @@
-:root {
-    --white: #ffffff;
-    --accent-color: #ff6347; /* Puedes cambiarlo a otro color */
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;

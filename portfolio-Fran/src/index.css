@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Variables de temas (se aplican automáticamente a nivel root) */
 [data-theme="light"] {
   --white: #ffffff;
@@ -27,4 +31,10 @@
   font-style: normal;
 }
 
+
+body {
+  background-color: var(--background-color); /* Usamos la variable */
+  margin: 0;
+  padding: 0;
+}
 
