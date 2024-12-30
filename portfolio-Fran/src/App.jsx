@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import { Toggle } from './components/Toggle.jsx'
-import { FollowMouse } from './components/FollowMouse.jsx';
-import { ButtonColor } from './components/ButtonColor.jsx';
+import { useState } from 'react';
+import './App.css';
+
+import { Toggle } from './components/Components.jsx';
+import { FollowMouse } from './components/Components.jsx';
+import { ButtonColor } from './components/Components.jsx';
+import Navbar from './components/NavBar.jsx'
 
 export const App = () => {
   const [isDark, setIsDark] = useState(true)
@@ -10,6 +12,7 @@ export const App = () => {
   return (
     <>
       <div className="App" data-theme={isDark ? "dark" : "light"}>
+        <Navbar/>
         <ButtonColor text={"PEPE"}/>
         <Toggle isChecked={isDark} handleChange={() => setIsDark(!isDark)}/>
       <FollowMouse />

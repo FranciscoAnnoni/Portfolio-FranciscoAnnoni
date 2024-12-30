@@ -1,8 +1,35 @@
 
+/*Follow Mouse*/
+.cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--foreground-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    background-color: transparent;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+  
+  .cursor-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--foreground-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+  }
+  
+
+
+/*Buton color*/
 :root{
-    --bg-color-1: #121212;
-    --bg-color-2: #FFD433;
-    --bg-color-3: #FF90E8;
+    --bg-color-1: #0b192e;
+    --bg-color-2: #5f7a86;
+    --bg-color-3: #0f4460;
     --padding: 1rem 4rem;
     --font-family: monospace;
     --step: 0.5rem;

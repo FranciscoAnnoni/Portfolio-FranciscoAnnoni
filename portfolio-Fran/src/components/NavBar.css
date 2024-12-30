@@ -1,0 +1,70 @@
+:root {
+    --white: #ffffff;
+    --accent-color: #ff6347; /* Puedes cambiarlo a otro color */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .navbar-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  .navbar-right {
+    display: flex;               /* Utiliza flexbox para alinearlos */
+    justify-content: flex-end;   /* Alinea a la derecha */
+}
+
+.nav-links {
+    list-style-type: none;       /* Elimina los puntos de la lista */
+    padding: 0;                  /* Elimina el relleno */
+    margin-right: 30px;                   /* Elimina el margen */
+    display: flex;               /* Utiliza flexbox para los items */
+}
+
+.nav-links li {
+    margin-left: 30px;           /* Espacio entre los elementos */
+}
+
+
+/* Estilos generales para los enlaces */
+.navbar .nav-link {
+    color: var(--white); /* Personaliza con tu color base */
+    font-family: 'Mc Saatchi', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-color); /* Cambia a tu color de hover */
+}
+
+/* Subrayado dinámico */
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: var(--accent-color); /* Personaliza con tu color de subrayado */
+    bottom: -5px; /* Ajusta la distancia entre texto y subrayado */
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}

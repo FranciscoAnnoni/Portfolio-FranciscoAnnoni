@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import './FollowMouse.css'
+import './Components.css'
 
+//----------------------------------------------------------------------------// Sigue el mouse
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -32,7 +33,6 @@ export const FollowMouse = () => {
   // [enabled] -> se ejecuta cuando cambia enabled y cuando se monta el componente
   // undefined -> se ejecuta cada vez que se renderiza el componente
 
-  // change body className
   useEffect(() => {
     document.body.classList.toggle('no-cursor', enabled)
 
@@ -65,5 +65,35 @@ export const FollowMouse = () => {
       {enabled ? 'Desactivar' : 'Activar'} seguir puntero
     </button>
   </>
-  )
-}
+  );
+};
+
+
+//----------------------------------------------------------------------------// Toggle de Cambio de Modo Darck a Light
+export const Toggle = ({handleChange, isChecked}) => {
+    return (
+        <div className="toggle-container">
+            <input
+            type="checkbox"
+            id="check"
+            className="toggle"
+            onChange={handleChange}
+            checked={isChecked}
+            />
+            <label htmlFor="check">Dark Mode</label>
+        </div>
+        
+    );
+};
+
+//----------------------------------------------------------------------------// Boton vase de la App
+export const ButtonColor = ({text}) => {
+    return (
+        <button>
+        <span aria-hidden="true">{text}</span>
+        <span></span>
+        <span>{text}</span>
+      </button>
+        
+    );
+};
