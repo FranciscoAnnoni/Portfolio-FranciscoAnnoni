@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './Components.css'
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { FaMouse, FaMousePointer } from 'react-icons/fa';
-
+ 
 
 //----------------------------------------------------------------------------// Sigue el mouse
 export const FollowMouse = () => {
@@ -12,18 +12,19 @@ export const FollowMouse = () => {
   // Efecto para seguir el mouse
   useEffect(() => {
     const handleMove = (event) => {
-      const { clientX, clientY } = event;
-      setPosition({ x: clientX, y: clientY });
+      const { pageX, pageY } = event; // Usa pageX y pageY
+      setPosition({ x: pageX, y: pageY });
     };
-
+  
     if (enabled) {
       window.addEventListener('pointermove', handleMove);
     }
-
+  
     return () => {
       window.removeEventListener('pointermove', handleMove);
     };
   }, [enabled]);
+  
 
   // Efecto para cambiar el estilo del cuerpo
   useEffect(() => {
@@ -93,8 +94,8 @@ export const ButtonColor = ({text}) => {
 //----------------------------------------------------------------------------// Boton vase de la App
 export const ButtonNav = ({ text, href, onClick }) => {
   return (
-    <div class="button-nav-wrapper">
-    <a class="button-nav" href="/your-link" target="_blank" rel="noopener noreferrer">{text}</a>
+    <div className="button-nav-wrapper">
+    <a className="button-nav" href="/your-link" target="_blank" rel="noopener noreferrer">{text}</a>
     </div>
   );
 };

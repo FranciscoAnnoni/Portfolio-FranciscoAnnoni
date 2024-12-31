@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from './components/NavBar.jsx'
+import { FollowMouse } from './components/components.jsx';
+
 import './App.css';
 
 export const App = () => {
@@ -12,6 +14,8 @@ export const App = () => {
   }, [isDark]);
 
   return (
+    <>
+    <FollowMouse/>
     <div className="App">
       <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
       <h1 className="title">Titulo</h1>
@@ -67,5 +71,6 @@ export const App = () => {
         <h2>About Section</h2>
       </div>
     </div>
+    </>
   );
 };

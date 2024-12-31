@@ -17,9 +17,6 @@ const Navbar =  ({handleChange, isChecked}) => {
                 </div>
 
                 <div className="navbar-right">
-                    <div>
-                        <FollowMouse/>
-                    </div>
                 <div>
                     <a className="darkLight-icon">
                         <Toggle isChecked={isChecked} handleChange={handleChange}/>
