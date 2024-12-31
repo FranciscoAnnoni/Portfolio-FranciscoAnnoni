@@ -92,7 +92,7 @@
   button span {
     font-size: 15px;
     font-weight: 600;
-    font-family: var(--primary-font);
+    font-family: var(--primary-family);
     inset: 0;
     display: grid;
     background: var(--bg);

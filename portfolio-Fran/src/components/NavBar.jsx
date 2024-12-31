@@ -8,13 +8,24 @@ import { FollowMouse } from './Components.jsx';
 
 
 const Navbar =  ({handleChange, isChecked}) => {
-    
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         
             <nav className="navbar">
-                <div className="navbar-left">
-                    <a href="/" className="logo">Francisco Annoni</a>
-                </div>
+            <div className="navbar-left">
+                <a
+                    className="logo"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <div className="title-container">
+                        <span className={`title-main ${isHovered ? "slide-out" : ""}`}>F.A.</span>
+                        <span className={`title-hover ${isHovered ? "slide-in" : ""}`}>Francisco Annoni</span>
+                    </div>
+                </a>
+            </div>
+
 
                 <div className="navbar-right">
                 <div>

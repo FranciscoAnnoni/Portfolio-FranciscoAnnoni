@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
-import Navbar from './components/NavBar.jsx'
 import { FollowMouse } from './components/components.jsx';
+
+import Introduction from './pages/Introduction.jsx'
+import Navbar from './components/NavBar.jsx'
+
+
 
 import './App.css';
 
@@ -16,60 +20,9 @@ export const App = () => {
   return (
     <>
     <FollowMouse/>
+    <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
     <div className="App">
-      <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      <h1 className="title">Titulo</h1>
-      {/* Agrega todo el contenido aquí */}
-      <div id="about" className="section">
-        <h2>About Section</h2>
-      </div>
+    <Introduction/>
     </div>
     </>
   );

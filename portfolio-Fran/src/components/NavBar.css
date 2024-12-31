@@ -1,15 +1,22 @@
 .navbar {
+    position: fixed; /* Hace que la navbar quede fija */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la ventana */
+    z-index: 1000; /* Coloca la navbar encima de los demás elementos */
+    background-color: var(--background-color); /* Asegúrate de darle un fondo para que no se mezcle con el contenido */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-  }
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Añade una sombra para dar un efecto flotante */
+}
   .navbar-left .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-text-color);
     text-decoration: none;
+    font-family: var(--primary-family);
   }
 
 
@@ -64,3 +71,65 @@
     transform: scaleX(1);
     transform-origin: left;
 }
+
+
+.logo {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.title-container {
+    display: flex;
+    position: relative;
+    width: 260px; /* Cambia según el ancho máximo del texto más largo */
+    height: 2.5rem; /* Mantén el mismo valor para ambos textos */
+    overflow: hidden;
+}
+
+.title-main {
+    position: absolute; /* Los posicionamos absolutos para que partan del mismo punto */
+    top: 0; /* Alineamos ambos al tope del contenedor */
+    left: 0px; /* Se alinean en el mismo punto horizontal */
+    white-space: nowrap; /* Evita que el texto se divida */
+    display: inline-block;
+    font-size: 2rem; /* Tamaño uniforme */
+    font-weight: bold;
+    color: var(--primary-text-color);
+    transition: transform 0.5s ease;
+}
+.title-hover {
+    position: absolute; /* Los posicionamos absolutos para que partan del mismo punto */
+    top: 0; /* Alineamos ambos al tope del contenedor */
+    left: 0px; /* Se alinean en el mismo punto horizontal */
+    white-space: nowrap; /* Evita que el texto se divida */
+    display: inline-block;
+    font-size: 2rem; /* Tamaño uniforme */
+    font-weight: bold;
+    color: var(--foreground-color);
+    transition: transform 0.5s ease;
+
+}
+
+.title-main {
+    transform: translateX(0); /* Parte desde su posición inicial */
+}
+
+.title-hover {
+    transform: translateX(110%); /* Parte fuera del área visible */
+}
+
+.title-main.slide-out {
+    transform: translateX(-100%); /* Se desliza completamente hacia afuera */
+}
+
+.title-hover.slide-in {
+    transform: translateX(0); /* Aparece desde la misma posición que F.A. */
+}
+
