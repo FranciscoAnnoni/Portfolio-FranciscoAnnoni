@@ -1,0 +1,54 @@
+.About {
+    display: flex;
+
+  }
+
+
+.numbered-heading {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(26px, 5vw, var(--fz-heading));
+    white-space: nowrap;
+}
+
+.numbered-heading::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: var(--foreground-color);
+    font-family: var(--thirt-family);
+    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+    font-weight: 400;
+}
+
+.numbered-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--secondary-text-color);
+}
+
+.aboutme-title{
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-family: var(--primary-family);
+    margin-bottom: 10px;
+}
+
+.aboutme-text{
+    font-family: var(--small-family);
+    color: var( --secondary-text-color);
+    font-size: 20px;
+    max-width: 700px;
+    line-height: 1.6; 
+    }
+    

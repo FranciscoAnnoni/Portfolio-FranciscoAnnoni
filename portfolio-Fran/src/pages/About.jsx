@@ -1,32 +1,42 @@
 import React from 'react';
-import './Introduction.css'
+import './About.css'
+import { FaPython, FaJava, FaReact, FaNodeJs, FaGitSquare,  FaDocker , FaAws } from 'react-icons/fa';
+import { IoLogoJavascript } from "react-icons/io5";
+import { TbBrandKotlin } from "react-icons/tb";
 
+// Usarlos en tu componente
 
 const About = () => {
     return (
         
-        <section className="Introduction" >
+        <section className="About" >
         <div id="about">
-            <div  className="pt-5">
-            <p  className="Small-text">Hi, my name is</p>
+            <div className="numbered-heading">
+                <h2 className="aboutme-title">
+                    About Me
+                </h2>
             </div>
-            <div className="pt-5">
-            <h1 className="Introduction-title">Francisco Annoni.</h1>
-            </div >
-            <div className="pt-8">
-            <h2 className="Introduction-subtitle">I’m a Full Stack Engineer.</h2>
+            <div className='aboutme-text'>
+                <p>Hello! My name is Francisco, and I’m a technology enthusiast and Systems Engineer. I started programming in 2018, which sparked my passion for creating impactful and innovative solutions. I began my degree in Systems Engineering at UTN in 2019, and I graduated in 2024, diving deeper into the world of tech along the way.</p>
+                <p> Over the years, I’ve gained experience working as a Data Architect at DBlandIT, where I was responsible for designing data architectures and optimizing information flows. More recently, I’ve focused on full-stack development, working with technologies like React, Node.js, and Kotlin to build dynamic, user-focused web and mobile applications.</p>
+                <p>I’m a fast learner, a creative problem solver, and I thrive on taking on new challenges that help me grow both professionally and personally.</p>
+                <p>Here are some of the technologies I’ve been working with recently:</p>
             </div>
-            <div className="pt-8">
-            <p className="Introduction-p">I design, develop, and execute innovative projects that solve real-world problems. I focus on adaptability, precision, and collaboration to create solutions that meet the unique needs of each client.</p>
-            </div>
-            
-            <div className="arrow-container">
-            <div className="arrow"> <a href='#about'></a></div>
+            <div>
+            <FaPython color="orange" size={30} />
+            <FaJava color="green" size={30} />
+            <FaReact color="lightblue" size={30} />
+            <FaNodeJs color="yellow" size={30}/>
+            <FaGitSquare  color="green" size={30} />
+            <IoLogoJavascript color="yellow" size={30}/>
+            <TbBrandKotlin color="yellow" size={28} />
+            <FaAws  color="yellow" size={30} />
+            <FaDocker  color="yellow" size={30} />
+            <p>HOLA</p>
             </div>
         </div>
         </section>
         
-    
     );
 };
 
