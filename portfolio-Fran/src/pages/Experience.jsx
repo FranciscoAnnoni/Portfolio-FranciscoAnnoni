@@ -8,7 +8,7 @@ import { TabSection } from '../components/Components';
 const Experience = () => {
     return (
         
-        <section className="Flex" >
+        <section className="Flex" id="experience">
         <div id="experience">
             <div className="numbered-heading">
                 <h2 className="title-section">

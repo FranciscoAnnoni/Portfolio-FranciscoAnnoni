@@ -9,8 +9,8 @@ import { TbBrandKotlin } from "react-icons/tb";
 const About = () => {
     return (
         
-        <section className="Flex" >
-        <div id="about">
+        <section className="Flex" id="about">
+        <div>
             <div className="numbered-heading">
                 <h2 className="title-section">
                     About Me
