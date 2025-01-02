@@ -8,8 +8,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: Añade una sombra para dar un efecto flotante */
+    padding: 1rem;
+    box-shadow: 0 2px 5px var(--sombra) /* Opcional: Añade una sombra para dar un efecto flotante */
 }
   .navbar-left .logo {
     font-size: 1.5rem;
@@ -20,17 +20,18 @@
   }
 
 
-  .navbar-right {
+.navbar-right {
     display: flex;               /* Utiliza flexbox para alinearlos */
     justify-content: flex-end;   /* Alinea a la derecha */
     align-items:center;
+    margin-right: 50px;
 }
 
 .nav-links {
-    list-style-type: none;       /* Elimina los puntos de la lista */
-    padding: 0;                  /* Elimina el relleno */
-    margin-right: 30px;                   /* Elimina el margen */
-    display: flex;               /* Utiliza flexbox para los items */
+    list-style-type: none;       
+    padding: 0;                 
+    margin-right: 30px;                   
+    display: flex;               
 }
 
 .nav-links li {
@@ -41,9 +42,9 @@
 /* Estilos generales para los enlaces */
 .navbar .nav-link {
     color: var(--primary-text-color); /* Personaliza con tu color base */
-    font-family: 'Mc Saatchi', sans-serif;
-    font-size: 18px;
-    font-weight: 900;
+    font-family: var(--primary-family);
+    font-size: 21px;
+    font-weight: 760;
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -51,6 +52,10 @@
 
 .navbar .nav-link:hover {
     color: var(--foreground-color); /* Cambia a tu color de hover */
+}
+.nav-link.active{
+    color: var(--foreground-color); /* Cambia a tu color de hover */
+    
 }
 
 /* Subrayado dinámico */
@@ -133,3 +138,6 @@
     transform: translateX(0); /* Aparece desde la misma posición que F.A. */
 }
 
+.buttonNav{
+    padding-left: 20px;
+}

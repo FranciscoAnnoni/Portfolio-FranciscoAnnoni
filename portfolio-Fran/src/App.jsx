@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { FollowMouse } from './components/components.jsx';
 
 import Introduction from './pages/Introduction.jsx'
+import About from './pages/About.jsx'
+
 import Navbar from './components/NavBar.jsx'
 
 
@@ -23,6 +25,7 @@ export const App = () => {
     <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
     <div className="App">
     <Introduction/>
+    <About/>
     </div>
     </>
   );

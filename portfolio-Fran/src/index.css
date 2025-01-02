@@ -12,21 +12,40 @@ html {
 /* Variables de temas (se aplican automáticamente a nivel root) */
 [data-theme="light"] {
   --white: #ffffff;
-  --background-color: #f8eddc;
-  --primary-text-color: #0b192b;
-  --foreground-color: #ed892f;
+  --background-color: var(--blanco-crema);
+  --primary-text-color: var(--azul-oscuro);
+  --foreground-color:var(--naranja-claro);
+  --secondary-text-color: var(--gris-oscuro);
+  --sombra:var(--sombra-light);
 }
 
 [data-theme="dark"] {
-  --background-color: #0b192b;
-  --primary-text-color: #f8eddc;
-  --foreground-color:  #ff6347;
+  --background-color: var(--azul-oscuro);
+  --primary-text-color: var(--blanco-crema);
+  --foreground-color: var(--naranja);
+  --secondary-text-color: var(--gris);
+  --sombra: var(--sombra-dark);
 }
 
 :root {
+
+  --blanco-crema: #f8eddc;
+
+  --gris: #8892b0;
+  --gris-oscuro:#495670;
+  --azul-oscuro:#0b192b;
+
+  --naranja-claro: #ed892f;
+  --naranja: #ff6347;
+
+  --sombra-light: rgba(0, 0, 0, 0.24);
+  --sombra-dark: rgba(0, 0, 0, 0.84);
+
   --primary-family: "Inter", serif;
   --second-family: 'Mc Saatchi', sans-serif;
   --thirt-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  --small-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+
 
 }
 

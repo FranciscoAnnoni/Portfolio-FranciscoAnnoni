@@ -1,3 +1,11 @@
+
+.pt-5{
+  padding-top: 5px;
+}
+.pt-8{
+  padding-top: 8px;
+}
+
 .Introduction {
   display: flex;
   -webkit-box-pack: center;
@@ -16,16 +24,52 @@
 }
 
 .Introduction-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: var(--primary-text-color);
   margin: 0;
-  font-weight: 800;
+  font-weight: 700;
   font-family: var(--primary-family);
+
 }
 
 .Introduction-subtitle {
-  font-size: 2rem;
-  color: var(--secondary-text-color);
-  margin-top: 0.5rem;
-  font-family: var( --second-family)
+  font-size: 3.6rem;
+  color: var( --secondary-text-color);
+  font-family: var(--primary-family);
+
+}
+
+.Introduction-p{
+font-family: var(--small-family);
+color: var( --secondary-text-color);
+font-size: 20px;
+max-width: 700px;
+line-height: 1.6; 
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  border-left: 4px solid var(--foreground-color);
+  border-bottom: 4px solid var(--foreground-color);
+  transform: rotate(45deg);
+  animation: bounce 1s infinite alternate;
+  
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0) rotate(-45deg);
+  }
+  100% {
+      transform: translateY(10px) rotate(-45deg);
+  }
 }

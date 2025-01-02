@@ -1,9 +1,12 @@
 .App {
   display: flex;
   flex-direction: column;
+  align-items: center;        /* Centra el contenido horizontalmente */
+  justify-content: center;    /* Centra el contenido verticalmente */
   background-color: var(--background-color);
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0;                  /* Elimina márgenes del navegador */
+  width: 100%;
+  min-height: 100vh;       
 }
 
 
@@ -12,3 +15,8 @@
 }
 
 
+section {
+  margin: 0px 10%;
+  padding: 100px 0px;
+  max-width: 1000px;
+}
