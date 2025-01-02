@@ -56,8 +56,6 @@
     font-size: 15px; /* Tamaño del icono */
   }
   
-
-
 /*Buton color*/
 :root{
     --padding: 1rem 4rem;
@@ -118,9 +116,145 @@
   button:active {
     --active: 0.43;
   }
-
-
-
   
-  
+/*----------------------------------*/
+/* App container styles */
+.app-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 400%; /* Forzar ancho uniforme */
+  max-width: 600px; /* Fija un máximo */
+}
+
+/* Maintain tab width */
+.tabs-container .tab-button {
+  font-family: var(--thirt-family);
+  width: 100%; /* Forzar ancho uniforme */
+  max-width: 150px; /* Fija un máximo */
+}
+
+/* Tabs (left menu) */
+.tabs-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Tab Button Styling */
+.tab-button {
+  color:var(--secondary-text-color);
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  text-align: center; /* Centrar el texto */
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Ancho fijo */
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  font-weight: bold;
+  color: var(--foreground-color)
+}
+
+/* Hover Effect */
+.tab-button:hover {
+  font-weight: bold;
+  background-color:rgba(255, 192, 203, 0.217); /* Rosa claro con 30% de opacidad */ ;
+}
+
+/* Vertical Highlight Line */
+.tab-button::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Coloca la línea al borde izquierdo */
+  top: 0;
+  bottom: 0;
+  width: 3px; /* Ancho de la línea vertical */
+  background-color: transparent; /* Línea invisible por defecto */
+  transition: background-color 0.3s ease;
+}
+
+/* Active Tab Line (Vertical) */
+.tab-button.active::before {
+  background-color: var(--foreground-color); /* Color para la pestaña activa */
+}
+
+/* Hover Effect for Line */
+.tab-button:hover::before {
+  /*background-color: rgba(255, 165, 0, 0.7);  Color al pasar el mouse */ 
+}
+
+.tab-button::before {
+  background-color: rgba(125, 125, 125, 0.381); /* Color al pasar el mouse */ 
+}
+
+/* Content (right section) */
+.content-container {
+  width: 75%; /* Ancho fijo del contenedor */
+  height: 100%; /* Asegura que siempre ocupe todo el alto */
+  padding: 0px 10px 10px 20px;
+  overflow-y: auto; /* Desplazamiento si el contenido es más largo */
+  font-family: var(--small-family);
+}
+
+/* Panel Content */
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  color: var( --thirty-text-color);
+  font-weight: 500;
+  font-family: var(--primary-family);
+  margin-bottom: 10px;
+}
+
+.subtitulo{
+  font-family: var(--thirt-family);
+  color: var(--secondary-text-color);
+  font-size: 12px;
+  padding-bottom: 6px;
+}
+.texto{
+  font-family: var(--small-family);
+  color: var(--secondary-text-color);
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+/* Estilo general para la lista */
+.custom-list {
+  list-style-type: none; /* Elimina el marcador nativo */
+  padding: 0;
+  margin: 0;
+  position: relative; /* Necesario para posicionar ::before de los li */
+}
+
+/* Aplica el estilo al before de los li */
+.custom-list-item {
+  position: relative; /* Necesario para posicionar el ::before */
+  padding-left: 20px; /* Espacio reservado para el símbolo */
+}
+
+.custom-list-item::before {
+  content: "-"; /* Símbolo que reemplaza el marcador */
+  position: absolute;
+  left: 0; /* Coloca el símbolo al inicio */
+  color: var(--foreground-color); /* Color personalizado */
+  font-size: 1.2em; /* Tamaño opcional para el símbolo */
+  font-family: Arial, sans-serif; /* Opcional, asegura que el símbolo sea uniforme */
+}
 

@@ -9,14 +9,14 @@ import { TbBrandKotlin } from "react-icons/tb";
 const About = () => {
     return (
         
-        <section className="About" >
+        <section className="Flex" >
         <div id="about">
             <div className="numbered-heading">
-                <h2 className="aboutme-title">
+                <h2 className="title-section">
                     About Me
                 </h2>
             </div>
-            <div className='aboutme-text'>
+            <div className='text-section'>
                 <p>Hello! My name is Francisco, and I’m a technology enthusiast and Systems Engineer. I started programming in 2018, which sparked my passion for creating impactful and innovative solutions. I began my degree in Systems Engineering at UTN in 2019, and I graduated in 2024, diving deeper into the world of tech along the way.</p>
                 <p> Over the years, I’ve gained experience working as a Data Architect at DBlandIT, where I was responsible for designing data architectures and optimizing information flows. More recently, I’ve focused on full-stack development, working with technologies like React, Node.js, and Kotlin to build dynamic, user-focused web and mobile applications.</p>
                 <p>I’m a fast learner, a creative problem solver, and I thrive on taking on new challenges that help me grow both professionally and personally.</p>

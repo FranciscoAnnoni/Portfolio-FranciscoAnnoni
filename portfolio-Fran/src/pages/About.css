@@ -1,4 +1,4 @@
-.About {
+.Flex {
     display: flex;
 
   }
@@ -36,7 +36,7 @@
     background-color: var(--secondary-text-color);
 }
 
-.aboutme-title{
+.title-section{
     font-size: 2rem;
     color: var(--primary-text-color);
     font-weight: 700;
@@ -44,7 +44,7 @@
     margin-bottom: 10px;
 }
 
-.aboutme-text{
+.text-section{
     font-family: var(--small-family);
     color: var( --secondary-text-color);
     font-size: 20px;

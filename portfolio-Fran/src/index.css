@@ -17,6 +17,7 @@ html {
   --foreground-color:var(--naranja-claro);
   --secondary-text-color: var(--gris-oscuro);
   --sombra:var(--sombra-light);
+  --thirty-text-color:var(--gris-oscuro);
 }
 
 [data-theme="dark"] {
@@ -24,12 +25,14 @@ html {
   --primary-text-color: var(--blanco-crema);
   --foreground-color: var(--naranja);
   --secondary-text-color: var(--gris);
+  --thirty-text-color:var(--blanco-gris);
   --sombra: var(--sombra-dark);
 }
 
 :root {
 
   --blanco-crema: #f8eddc;
+  --blanco-gris: #ccd6f6;
 
   --gris: #8892b0;
   --gris-oscuro:#495670;
@@ -61,5 +64,7 @@ body {
   background-color: var(--background-color); /* Usamos la variable */
   margin: 0;
   padding: 0;
+  counter-reset: section;
+
 }
 

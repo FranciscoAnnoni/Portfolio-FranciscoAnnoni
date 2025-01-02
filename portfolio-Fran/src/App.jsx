@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
-import { FollowMouse } from './components/components.jsx';
+import { FollowMouse } from './components/Components.jsx';
 
 import Introduction from './pages/Introduction.jsx'
 import About from './pages/About.jsx'
+import Experience from './pages/Experience.jsx';
 
 import Navbar from './components/NavBar.jsx'
 
 
 
 import './App.css';
+
 
 export const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -26,6 +28,7 @@ export const App = () => {
     <div className="App">
     <Introduction/>
     <About/>
+    <Experience/>
     </div>
     </>
   );
