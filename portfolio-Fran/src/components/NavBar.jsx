@@ -61,10 +61,10 @@ const Navbar = ({ handleChange, isChecked }) => {
           </li>
           <li>
             <a 
-              href="/#projects" 
+              href="/#work" 
               className={`nav-link ${activeLink === "#projects" ? "active" : ""}`}
             >
-              Projects
+              Work
             </a>
           </li>
         </ul>

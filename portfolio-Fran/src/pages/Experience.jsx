@@ -1,5 +1,4 @@
-import React from 'react';
-import './About.css'
+import './Pages.css'
 
 import { TabSection } from '../components/Components';
  
@@ -8,7 +7,7 @@ import { TabSection } from '../components/Components';
 const Experience = () => {
     return (
         
-        <section className="Flex" id="experience">
+        <section className="Flex experience" id="experience">
         <div id="experience">
             <div className="numbered-heading">
                 <h2 className="title-section">

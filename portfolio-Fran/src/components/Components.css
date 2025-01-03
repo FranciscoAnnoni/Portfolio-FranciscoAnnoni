@@ -125,7 +125,7 @@
   padding: 0;
   overflow: hidden;
   width: 400%; /* Forzar ancho uniforme */
-  max-width: 635px; /* Fija un máximo */
+  max-width: 730px; /* Fija un máximo */
   height: 400px; /* Altura fija */
 }
 
@@ -138,7 +138,7 @@
 
 /* Tabs (left menu) */
 .tabs-container {
-  width: 25%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -152,7 +152,7 @@
   background: none;
   text-align: center; /* Centrar el texto */
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   display: flex;
   align-items: center;
@@ -205,8 +205,6 @@
   font-family: var(--small-family);
 }
 
-
-
 /* Panel Content */
 .panel {
   display: none;
@@ -217,7 +215,7 @@
 }
 
 .titulo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var( --thirty-text-color);
   font-weight: 500;
   font-family: var(--primary-family);
@@ -227,10 +225,11 @@
 .subtitulo{
   font-family: var(--thirt-family);
   color: var(--secondary-text-color);
-  font-size: 15px;
+  font-size: 18px;
   padding-bottom: 6px;
 }
 .texto{
+  font-size: 18px;
   font-family: var(--small-family);
   color: var(--secondary-text-color);
   position: relative;
@@ -258,5 +257,77 @@
   color: var(--foreground-color); /* Color personalizado */
   font-size: 1.2em; /* Tamaño opcional para el símbolo */
   font-family: Arial, sans-serif; /* Opcional, asegura que el símbolo sea uniforme */
+}
+
+/* Card Work Stile */
+/*----------------------------------*/
+
+.projects__StyledProject-sc-1v1fime-1 {
+  transition: var(--transition);
+  &:hover,
+  &:focus {
+      transform: translateY(-5px);
+  }
+}
+
+.project-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--light-navy);
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: var(--transition);
+}
+.project-top {
+  display: flex
+;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+
+.folder {
+  color: var(--foreground-color);
+  font-size: 40px;
+  
+}
+
+.project-links a {
+  margin-left: 10px;
+  color: var(--light-slate);
+  &:hover,
+  &:focus {
+      color: var(--green);
+  }
+}
+
+.project-title {
+  margin: 0 0 10px;
+  color: var(--lightest-slate);
+  font-size: var(--fz-xxl);
+}
+
+.project-description {
+  color: var(--light-slate);
+  font-size: var(--fz-lg);
+}
+
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  li {
+      font-family: var(--font-mono);
+      font-size: var(--fz-xs);
+      color: var(--light-slate);
+      margin-right: 15px;
+  }
 }
 

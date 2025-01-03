@@ -1,6 +1,4 @@
-import React from 'react';
-
-import './Introduction.css'
+import './Pages.css'
 
 const Introduction = () => {
     return (

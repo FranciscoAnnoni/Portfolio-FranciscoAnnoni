@@ -57,6 +57,7 @@ html {
     --fz-xl: 20px;
     --fz-xxl: 22px;
 
+    --transition: 300ms;
 }
 
 body {

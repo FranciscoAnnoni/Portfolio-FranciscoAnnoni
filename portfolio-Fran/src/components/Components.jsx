@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import './Components.css'
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { FaMouse, FaMousePointer } from 'react-icons/fa';
- 
-
+import { FaGithub } from 'react-icons/fa';
+import { IoFolderOutline } from "react-icons/io5";
+import { FiExternalLink } from "react-icons/fi";
 //----------------------------------------------------------------------------// Sigue el mouse
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(true);
@@ -173,6 +174,43 @@ export const TabSection = () => {
         ))}
       </div>
     </div>
+  );
+};
+
+export const ProjectCard = ({ title, description, technologies, githubLink, projectLink }) => {
+  return (
+      <li className="projects__StyledProject-sc-1v1fime-1 gJHaRi">
+          <div className="project-inner">
+              <header>
+                  <div className="project-top">
+                      <div className="folder">
+                      <IoFolderOutline/>
+                      </div>
+                      <div className="project-links">
+                        <a href="https://github.com/bchiang7/octoprofile" aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
+                          <FaGithub/>
+                        </a>
+                        <a href="https://octoprofile.now.sh" aria-label="External Link" className="external" target="_blank" rel="noopener noreferrer">
+                          <FiExternalLink/>
+                        </a>
+                      </div>
+                  </div>
+                  <h3 className="project-title">
+                      <a href={projectLink} target="_blank" rel="noopener noreferrer">{title}</a>
+                  </h3>
+                  <div className="project-description">
+                      <p>{description}</p>
+                  </div>
+              </header>
+              <footer>
+                  <ul className="project-tech-list">
+                      {technologies.map((tech, index) => (
+                          <li key={index}>{tech}</li>
+                      ))}
+                  </ul>
+              </footer>
+          </div>
+      </li>
   );
 };
 
