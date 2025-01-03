@@ -1,5 +1,5 @@
-import { FaPython, FaJava, FaReact, FaNodeJs, FaGitSquare, FaAws, FaDocker } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io';
+import { FaPython, FaGitAlt, FaReact, FaNodeJs, FaGitSquare, FaAws, FaDocker } from 'react-icons/fa';
+import { IoLogoJavascript } from "react-icons/io5";
 import { TbBrandKotlin, TbFileTypeSql } from 'react-icons/tb';
 import { GrHadoop } from "react-icons/gr";
 
@@ -21,15 +21,16 @@ const About = () => {
                     </div>
                     <ul className="skills-list tech-item">
                         <li ><FaPython color="orange" size={30} /><span>Python</span></li>
-                        <li><IoLogoJavascript color="yellow" size={30} /><span>JavaScript (ES6+)</span></li>
+                        <li><IoLogoJavascript color="#e1cd1d" size={30} /><span>JavaScript (ES6+)</span></li>
                         <li><FaReact color="cyan" size={30} /><span>React</span></li>
-                        <li><FaNodeJs color="green" size={30} /><span>Node.js</span></li>
+                        <li><FaNodeJs color="#69ff2e" size={30} /><span>Node.js</span></li>
                         <li><TbBrandKotlin color="purple" size={30} /><span>Kotlin</span></li>
-                        <li><FaGitSquare color="red" size={30} /><span>Git</span></li>
+                        <li><FaGitAlt color="#ff4c07" size={30} /><span>Git</span></li>
+                        
+                        <li><TbFileTypeSql color="grey" size={30} /><span>SQL & NoSQL</span></li>
+                        <li><FaDocker color="#0fa5ff" size={30} /><span>Docker</span></li>
+                        <li><GrHadoop  color="#76d7ea" size={30} /><span>Hadoop</span></li>
                         <li><FaAws color="orange" size={30} /><span>AWS</span></li>
-                        <li><FaDocker color="blue" size={30} /><span>Docker</span></li>
-                        <li><TbFileTypeSql color="blue" size={30} /><span>SQL & NoSQL</span></li>
-                        <li><GrHadoop  color="yellow" size={30} /><span>Hadoop</span></li>
                     </ul>
                 </div>
                 <div className="about__StyledPic-sc-1ownso9-2 lbrXps">
