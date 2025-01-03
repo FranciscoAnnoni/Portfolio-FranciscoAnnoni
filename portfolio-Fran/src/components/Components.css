@@ -125,7 +125,8 @@
   padding: 0;
   overflow: hidden;
   width: 400%; /* Forzar ancho uniforme */
-  max-width: 600px; /* Fija un máximo */
+  max-width: 635px; /* Fija un máximo */
+  height: 400px; /* Altura fija */
 }
 
 /* Maintain tab width */
@@ -152,7 +153,6 @@
   text-align: center; /* Centrar el texto */
   cursor: pointer;
   font-size: 16px;
-  width: 100%; /* Ancho fijo */
   position: relative;
   display: flex;
   align-items: center;
@@ -205,6 +205,8 @@
   font-family: var(--small-family);
 }
 
+
+
 /* Panel Content */
 .panel {
   display: none;
@@ -225,7 +227,7 @@
 .subtitulo{
   font-family: var(--thirt-family);
   color: var(--secondary-text-color);
-  font-size: 12px;
+  font-size: 15px;
   padding-bottom: 6px;
 }
 .texto{

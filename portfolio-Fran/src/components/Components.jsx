@@ -101,61 +101,38 @@ export const ButtonNav = ({ text, href, onClick }) => {
 };
 
 //----------------------------------------------------------------------------// Scroll Section
+
 const tabs = [
   {
     id: "panel-0",
-    label: "Upstatement",
-    title: "Lead Engineer @ Upstatement",
-    date: "May 2018 - Present",
+    label: "DBlandIT",
+    title: "Data Architect - DBlandIT",
+    date: "Dec 2021 - Aug 2024",
     content: [
-      "Deliver high-quality, robust production code for a diverse array of projects for clients.",
-      "Work alongside creative directors to lead the research and development.",
-      "Collaborate with designers, project managers, and engineers to create production realities.",
-      "Provide leadership within engineering departments.",
+      "Implemented custom Bash scripting for log optimization and analysis, using Logrotate and Logstash to streamline data management and ensure system efficiency.",
+      "Designed and maintained MongoDB databases, configured ReplicaSets, and optimized database performance to meet the growing needs of the company.",
+      "Developed expertise in big data ecosystems such as Hadoop, Cloudera Manager, NiFi, HDFS, and YARN, leading data integration and management projects.",
+      "Utilized monitoring tools such as Kibana and Grafana, as well as others like Prometheus and ElasticSearch, to ensure system health and performance.",
     ],
   },
   {
     id: "panel-1",
-    label: "Apple",
-    title: "UI Engineer Co-op @ Apple",
-    date: "July - December 2017",
+    label: "Researcher",
+    title: "Research and Development Intern - UTN",
+    date: "Apr 2020 - Dec 2021",
     content: [
-      "Developed and styled interactive web applications for Apple Music.",
-      "Built and shipped Apple Music Extension for Facebook Messenger.",
-      "Architected Apple Music's embeddable web player widget.",
-      "Contributed extensively to MusicKit JS.",
+      "I collaborated with the teaching team at UDB Chemistry to develop a platform for administering exams and storing responses during the pandemic.",
+      "The platform was built using Google Suite and Google's set of tools, managing channels and sequences to configure a spreadsheet for recording students' grades, which was later used for analysis and conclusions.",
     ],
   },
   {
     id: "panel-2",
-    label: "Scout Studio",
-    title: "Developer @ Scout Studio",
-    date: "Spring 2016 & 2017",
+    label: "Intership",
+    title: "Web Page Design - Intership at High School",
+    date: "Spring 2017 & 2018",
     content: [
-      "Collaborated on projects for community organizations.",
-      "Created technical solutions for stakeholder business requirements.",
-    ],
-  },
-  {
-    id: "panel-3",
-    label: "Starry",
-    title: "Software Engineer Co-op @ Starry",
-    date: "July - December 2016",
-    content: [
-      "Engineered and improved major features of customer-facing apps.",
-      "Proposed scalable solutions for cloud services issues.",
-      "Collaborated with designers to create consistent experiences.",
-    ],
-  },
-  {
-    id: "panel-4",
-    label: "MullenLowe",
-    title: "Creative Technologist Co-op @ MullenLowe",
-    date: "July - December 2015",
-    content: [
-      "Developed and shipped production code for client websites.",
-      "Performed QA tests to ensure cross-browser compatibility.",
-      "Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense.",
+      "Assisted in the creation of the student record page for the school, helping design and implement a platform for managing student data.",
+      "Collaborated on the development of a basic webpage to showcase upcoming school events, providing an easy-to-use interface for students and teachers.",
     ],
   },
 ];

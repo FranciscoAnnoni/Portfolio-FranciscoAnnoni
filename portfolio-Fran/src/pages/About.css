@@ -50,5 +50,43 @@
     font-size: 20px;
     max-width: 700px;
     line-height: 1.6; 
-    }
-    
+}
+
+.tech-item span {
+    font-size: 16px;
+    color: var(--primary-text-color);
+}
+
+.image-section {
+    flex-basis: 300px;
+}
+
+.profile-photo {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--primary-text-color);
+}
+
+.about__StyledAboutSection-sc-1ownso9-0 {
+    /* Añade aquí los estilos necesarios */
+}
+
+.bNXWUU .inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+.kNIdQM ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.about__StyledPic-sc-1ownso9-2 .wrapper {
+    /* Añade aquí los estilos necesarios */
+}

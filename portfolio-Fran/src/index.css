@@ -59,12 +59,16 @@ html {
 
 }
 
-
 body {
   background-color: var(--background-color); /* Usamos la variable */
   margin: 0;
   padding: 0;
   counter-reset: section;
-
 }
 
+.pt-5{
+  padding-top: 5px;
+}
+.pt-8{
+  padding-top: 8px;
+}
