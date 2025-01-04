@@ -18,6 +18,7 @@ html {
   --secondary-text-color: var(--gris-oscuro);
   --sombra:var(--sombra-light);
   --thirty-text-color:var(--gris-oscuro);
+  --background-color-card: var(--blanco-crema-oscuro);
 }
 
 [data-theme="dark"] {
@@ -27,22 +28,29 @@ html {
   --secondary-text-color: var(--gris);
   --thirty-text-color:var(--blanco-gris);
   --sombra: var(--sombra-dark);
+  --background-color-card: var(--azul-oscuro-claro);
 }
 
 :root {
 
+  --blanco-crema-oscuro: #d7c9b3;
   --blanco-crema: #f8eddc;
   --blanco-gris: #ccd6f6;
 
   --gris: #8892b0;
   --gris-oscuro:#495670;
+
+  --azul-oscuro-claro:#283853;
   --azul-oscuro:#0b192b;
+
 
   --naranja-claro: #ed892f;
   --naranja: #ff6347;
 
   --sombra-light: rgba(0, 0, 0, 0.24);
   --sombra-dark: rgba(0, 0, 0, 0.84);
+
+
 
   --primary-family: "Inter", serif;
   --second-family: 'Mc Saatchi', sans-serif;

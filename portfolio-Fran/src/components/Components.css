@@ -263,10 +263,19 @@
 /*----------------------------------*/
 
 .projects__StyledProject-sc-1v1fime-1 {
+  background-color: var(--background-color-card);
   transition: var(--transition);
+  border-radius: 5%;
   &:hover,
   &:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       transform: translateY(-5px);
+      color: var(--foreground-color);
+  }
+  &:hover .project-title a,
+  &:focus .project-title a {
+    transition: var(--transition);
+      color: var(--foreground-color); /* Cambia el color del título */
   }
 }
 
@@ -280,9 +289,9 @@
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
   transition: var(--transition);
 }
+
 .project-top {
-  display: flex
-;
+  display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
@@ -297,37 +306,143 @@
   
 }
 
-.project-links a {
-  margin-left: 10px;
-  color: var(--light-slate);
-  &:hover,
-  &:focus {
-      color: var(--green);
+
+.project-title a{
+  text-decoration: none;
+  margin: 0 0 10px;
+  color:var(--thirty-text-color);
+  font-family: var(--second-family);
+  font-size: 20px;
+}
+
+.project-links {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  a {
+      color: var(--secondary-text-color);
+      font-size: 25px;
+      margin-left: 10px;
+      margin-right: 5px;
+      transition: var(--transition);
+      &:hover {
+          color: var(--foreground-color);
+      }
   }
 }
 
-.project-title {
-  margin: 0 0 10px;
-  color: var(--lightest-slate);
-  font-size: var(--fz-xxl);
-}
-
 .project-description {
-  color: var(--light-slate);
-  font-size: var(--fz-lg);
+  color: var(--secondary-text-color);
+  font-family: var(--primary-family);
+  font-weight: 350;
+  margin-top: 10px;
+
 }
 
 .project-tech-list {
+  color:var(--thirty-text-color);
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
+  bottom: 0;
   li {
-      font-family: var(--font-mono);
-      font-size: var(--fz-xs);
-      color: var(--light-slate);
+      font-family: var(--thirt-family);
+      font-size: 10px;
+      margin-top: 15px;
       margin-right: 15px;
   }
 }
 
+/* Featured Project */
+.featured__StyledProject-ywnbqt-1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  border-radius: 5%;
+  transition: var(--transition);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.featured__StyledProject-ywnbqt-1:hover,
+.featured__StyledProject-ywnbqt-1:focus {
+  transform: translateY(-5px);
+
+}
+
+.featured__StyledProject-ywnbqt-1 .project-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-title {
+  margin-bottom: 10px;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-title a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.featured__StyledProject-ywnbqt-1 .project-title a:hover,
+.featured__StyledProject-ywnbqt-1 .project-title a:focus {
+  color: var(--highlight-color);
+}
+
+.featured__StyledProject-ywnbqt-1 .project-description {
+  background-color: var(--description-background-color);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--secondary-text-color);
+  font-family: var(--primary-family);
+  font-weight: 350;
+  margin-top: 10px;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-tech-list li {
+  font-family: var(--thirt-family);
+  font-size: 10px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-links {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.featured__StyledProject-ywnbqt-1 .project-links a {
+  color: var(--secondary-text-color);
+  font-size: 25px;
+  margin-left: 10px;
+  margin-right: 5px;
+  transition: var(--transition);
+}
+
+.featured__StyledProject-ywnbqt-1 .project-links a:hover {
+  color: var(--foreground-color);
+}
