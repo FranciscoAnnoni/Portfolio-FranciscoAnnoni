@@ -17,7 +17,21 @@ const Work = () => {
             technologies: ['Tech 1', 'Tech 2', 'Tech 3'],
             githubLink: 'https://github.com/otro-repo',
             projectLink: 'https://otro-proyecto.com'
-        }
+        },
+        {
+          title: 'Project Title 2',
+          description: 'Another project description.',
+          technologies: ['Tech 1', 'Tech 2', 'Tech 3'],
+          githubLink: 'https://github.com/otro-repo',
+          projectLink: 'https://otro-proyecto.com'
+      },
+      {
+        title: 'Project Title 2',
+        description: 'Another project description.',
+        technologies: ['Tech 1', 'Tech 2', 'Tech 3'],
+        githubLink: 'https://github.com/otro-repo',
+        projectLink: 'https://otro-proyecto.com'
+    }
         // Añade más proyectos según sea necesario
     ];
 
@@ -34,8 +48,11 @@ const Work = () => {
               technologies={['VS Code', 'Sublime Text', 'Atom', 'iTerm2', 'Hyper']}
               githubLink="https://github.com/bchiang7/halcyon-site"
               projectLink="https://halcyon-theme.netlify.com/"
+              imagePath={'../images/bigWalrus.png'}
             />
+            
           </ul>
+
           <ul className="projects-grid">
             {projects.map((project, index) => (
               <ProjectCard
