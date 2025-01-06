@@ -71,7 +71,6 @@ export const FollowMouse = () => {
 
 //----------------------------------------------------------------------------// Toggle de Cambio de Modo Darck a Light
 
-
 export const Toggle = ({ handleChange, isChecked }) => {
   return (
     <button className="minimal-toggle-button" onClick={handleChange}>

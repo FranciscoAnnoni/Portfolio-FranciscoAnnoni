@@ -6,7 +6,6 @@ import './Pages.css'
 
 const Contact = () => {
     return (
-        
         <section className="Flex contact" id="contact">
         <div id="contact">
             <div className="numbered-heading contact-heading">
@@ -21,7 +20,7 @@ I'm always on the lookout for new opportunities! Feel free to reach out and let 
             </div>
             
             <div className='button-contact'>
-          <a className="mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ambrogioannoni@gmail.com&amp;su=Consulta%20Web" target="_blank" rel="noopener noreferrer">
+          <a className="mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=franciscoannoni@gmail.com&amp;su=Consulta%20Web" target="_blank" rel="noopener noreferrer">
           <ButtonColor text="Contact Me!" className="button-contact-personal"  />
           </a>
         </div>
