@@ -81,15 +81,14 @@ export const Toggle = ({ handleChange, isChecked }) => {
 };
 
 //----------------------------------------------------------------------------// Boton vase de la App
-export const ButtonColor = ({text}) => {
-    return (
-        <button>
-        <span aria-hidden="true">{text}</span>
-        <span></span>
-        <span>{text}</span>
-       </button>
-        
-    );
+export const ButtonColor = ({ text, className }) => {
+  return (
+    <button className={className}>
+      <span aria-hidden="true">{text}</span>
+      <span></span>
+      <span>{text}</span>
+    </button>
+  );
 };
 
 //----------------------------------------------------------------------------// Boton vase de la App
@@ -217,9 +216,9 @@ export const ProjectCard = ({ title, description, technologies, githubLink, proj
 
 export const FeaturedProjectCard = ({ title, description, technologies, githubLink, projectLink, imagePath }) => {
   return (
-    <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4" style={{ visibility: 'visible', opacity: 1, transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)', transition: 'all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)' }}>
+    <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4">
       <div className="project-content">
-        <div>
+        <div className="project-text">
           <p className="project-overline">Featured Project</p>
           <h3 className="project-title-work">
             <a href={projectLink} rel="noopener noreferrer" target="_blank">{title}</a>
@@ -227,28 +226,28 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
           <div className="project-description">
             <p>{description}</p>
           </div>
-          <ul className="project-tech-list">
+          <ul className="project-tech-list-featured">
             {technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
           </ul>
-          <div className="project-links">
-            <a href={githubLink} aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
-              <FaGithub />
-            </a>
-            <a href={projectLink} aria-label="External Link" className="external" rel="noopener noreferrer" target="_blank">
-              <FiExternalLink />
-            </a>
-          </div>
+        </div>
+        <div className="project-links-feature">
+          <a href={githubLink} aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
+            <FaGithub />
+          </a>
+          <a href={projectLink} aria-label="External Link" className="external" rel="noopener noreferrer" target="_blank">
+            <FiExternalLink />
+          </a>
         </div>
       </div>
       <div className="project-image">
-      <a href={projectLink} rel="noopener noreferrer" target="_blank">
-          <div data-gatsby-image-wrapper="" className="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-            <img width="700" height="438" data-main-image="" sizes="(min-width: 700px) 700px, 100vw" decoding="async" src={imagePath} srcSet={`${imagePath} 175w, ${imagePath} 350w, ${imagePath} 700w`} alt={title} className="main-image" />
+        <a href={projectLink} rel="noopener noreferrer" target="_blank">
+          <div>
+            <img decoding="async" src={imagePath} alt={title} className="main-image" />
             <noscript></noscript>
           </div>
-      </a>
+        </a>
       </div>
     </li>
   );

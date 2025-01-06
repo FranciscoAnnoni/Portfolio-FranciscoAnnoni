@@ -269,3 +269,80 @@
     width: 100%;
     margin-bottom: 20px;
   }
+
+  .title-2 {
+    font-family: var(--primary-family); /* Asegúrate de que esta variable esté definida */
+    font-size: 25px; /* Ajusta el tamaño de la fuente según tus necesidades */
+    font-weight: 800; /* Ajusta el peso de la fuente según tus necesidades */
+    color: var(--secondary-text-color); /* Asegúrate de que esta variable esté definida */
+    text-align: center; /* Alinea el texto al centro */
+    margin-top: 80px; /* Ajusta el margen según tus necesidades */
+  }
+
+  .inline-link {
+    padding-top: 15px;
+    font-family: var(--thirt-family);
+    color: var(--foreground-color); /* Asegúrate de que esta variable esté definida */
+    text-decoration: none;
+    position: relative; /* Necesario para el subrayado dinámico */
+    display: inline-block; /* Asegura que el enlace se comporte como un elemento en línea-bloque */
+    display: block; /* Asegúrate de que el enlace se comporta como bloque */
+    margin: auto;
+    width: max-content; /* Ajusta el ancho al contenido del enlace */
+  }
+  
+  /* Subrayado dinámico */
+  .inline-link::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: var(--foreground-color); /* Personaliza con tu color de subrayado */
+    bottom: -5px; /* Ajusta la distancia entre texto y subrayado */
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  
+  .inline-link:hover::after,
+  .inline-link:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  
+/*Contact section*/
+/*----------------------------------------------------------*/
+.contact-heading{
+margin: 10px;
+padding-bottom: 10px;
+}
+
+.contact{
+    max-width: 600px;
+    margin: 0px auto 100px;
+    text-align: center;
+}
+
+.contact-content{
+        background-color: var(--description-background-color);
+        color: var(--secondary-text-color);
+        font-family: var(--primary-family);
+        font-weight: 450;
+        font-size: large;
+        line-height: 1.4;
+padding-bottom: 10px;
+
+}
+
+.button-contact{
+margin-top: 20px;
+
+}
+
+/* Clase personalizada para el botón */
+.button-contact-personal span{
+   width: 200px; /* Ajusta el padding según tus necesidades */
+   height: 60px;
+  }

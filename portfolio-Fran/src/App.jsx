@@ -1,14 +1,21 @@
 import { useState, useEffect } from 'react';
-import { FollowMouse } from './components/Components.jsx';
 
+
+// Importamos las páginas
 import Introduction from './pages/Introduction.jsx'
 import About from './pages/About.jsx'
 import Experience from './pages/Experience.jsx';
 import Work from './pages/Work.jsx';
+import Contact from './pages/Contact.jsx';
 
+//importamos los componentes
 import Navbar from './components/NavBar.jsx'
+import Footer from './components/Footer.jsx';
+import { FollowMouse } from './components/Components.jsx';
 
+//los estilos
 import './App.css';
+
 
 export const App = () => {
   const [isDark, setIsDark] = useState(true);
@@ -28,7 +35,9 @@ export const App = () => {
     <About/>
     <Experience/>
     <Work/>
+    <Contact/>
     </div>
+    <Footer/>
     </>
   );
 };

@@ -36,7 +36,7 @@ const Work = () => {
     ];
 
     return (
-        <section className="Flex experience" id="work">
+        <section className="Flex work" id="work">
         <div id="work">
           <div className="numbered-heading">
             <h2 className="title-section">Some Things I’ve Built</h2>
@@ -50,10 +50,21 @@ const Work = () => {
               projectLink="https://halcyon-theme.netlify.com/"
               imagePath={'../images/bigWalrus.png'}
             />
+                      <FeaturedProjectCard
+              title="Halcyon Theme"
+              description="A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm."
+              technologies={['VS Code', 'Sublime Text', 'Atom', 'iTerm2', 'Hyper']}
+              githubLink="https://github.com/bchiang7/halcyon-site"
+              projectLink="https://halcyon-theme.netlify.com/"
+              imagePath={'../images/bigWalrus.png'}
+            />
             
           </ul>
-
-          <ul className="projects-grid">
+          <h2 className='title-2'>Other Noteworthy Projects</h2>
+              <a className="inline-link archive-link" href="https://github.com/FranciscoAnnoni?tab=repositories" target="_blank" rel="noopener noreferrer">
+                view my GitHub Repository
+              </a>
+            <ul className="projects-grid">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}

@@ -67,6 +67,14 @@ const Navbar = ({ handleChange, isChecked }) => {
               Work
             </a>
           </li>
+          <li>
+            <a 
+              href="/#contact" 
+              className={`nav-link ${activeLink === "#projects" ? "active" : ""}`}
+            >
+              Contact
+            </a>
+          </li>
         </ul>
 
         <div className='buttonNav'>

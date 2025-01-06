@@ -44,7 +44,7 @@
     color: var(--primary-text-color); /* Personaliza con tu color base */
     font-family: var(--primary-family);
     font-size: 18px;
-    font-weight: 760;
+    font-weight: 550;
     position: relative;
     text-decoration: none;
     transition: color 0.3s ease;
