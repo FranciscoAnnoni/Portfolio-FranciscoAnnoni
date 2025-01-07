@@ -104,7 +104,7 @@ export const ButtonNav = ({ text, href, onClick }) => {
 const tabs = [
   {
     id: "panel-0",
-    label: "DBlandIT",
+    label: "Data Architect",
     title: "Data Architect - DBlandIT",
     date: "Dec 2021 - Aug 2024",
     content: [

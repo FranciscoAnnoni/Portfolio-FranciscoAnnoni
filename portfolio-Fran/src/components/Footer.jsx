@@ -1,5 +1,6 @@
 import './Footer.css'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaSquareUpwork } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -12,6 +13,9 @@ const Footer = () => {
           </a>
           <a href="https://www.linkedin.com/in/franciscoannoni/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={40} />
+          </a>
+          <a href="https://www.upwork.com/freelancers/~0152a8fb701783a526" target="_blank" rel="noopener noreferrer">
+          <FaSquareUpwork size={40} />
           </a>
         </div>
       <div className="footer-container">

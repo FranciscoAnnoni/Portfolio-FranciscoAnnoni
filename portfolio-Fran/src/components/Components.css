@@ -125,16 +125,15 @@ button:active {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  width: 400%; /* Forzar ancho uniforme */
-  max-width: 730px; /* Fija un máximo */
-  height: 400px; /* Altura fija */
+  width: 400%;
+  max-width: 830px;
+  height: 380px;
 }
 
 /* Maintain tab width */
 .tabs-container .tab-button {
   font-family: var(--thirt-family);
-  width: 100%; /* Forzar ancho uniforme */
-  max-width: 150px; /* Fija un máximo */
+
 }
 
 /* Tabs (left menu) */
@@ -158,6 +157,7 @@ button:active {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
+  width: 102%;
 }
 
 .tab-button.active {
