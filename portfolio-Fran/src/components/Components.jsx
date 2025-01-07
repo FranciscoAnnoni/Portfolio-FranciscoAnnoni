@@ -129,7 +129,7 @@ const tabs = [
     label: "Intership",
     title: "Web Page Design - Intership at High School",
     date: "Spring 2017 & 2018",
-    content: [
+    content: [ 
       "Assisted in the creation of the student record page for the school, helping design and implement a platform for managing student data.",
       "Collaborated on the development of a basic webpage to showcase upcoming school events, providing an easy-to-use interface for students and teachers.",
     ],
