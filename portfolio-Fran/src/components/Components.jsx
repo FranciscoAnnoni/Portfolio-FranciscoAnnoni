@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Components.css'
 import { FaSun, FaMoon } from 'react-icons/fa';
+import { IoSunny } from "react-icons/io5";
 import { FaMouse, FaMousePointer } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { IoFolderOutline } from "react-icons/io5";
@@ -74,7 +75,7 @@ export const FollowMouse = () => {
 export const Toggle = ({ handleChange, isChecked }) => {
   return (
     <button className="minimal-toggle-button" onClick={handleChange}>
-      {isChecked ? <FaSun className="iconSun" /> : <FaMoon className="iconMoon" />}
+      {isChecked ? <IoSunny className="iconSun" /> : <FaMoon className="iconMoon" />}
     </button>
   );
 };

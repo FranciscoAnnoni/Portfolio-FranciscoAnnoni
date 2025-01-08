@@ -36,7 +36,7 @@ const Work = () => {
     ];
 
     return (
-        <section className="Flex work" id="work">
+        <section className="Flex work section" id="work">
         <div id="work">
           <div className="numbered-heading">
             <h2 className="title-section">Some Things I’ve Built</h2>

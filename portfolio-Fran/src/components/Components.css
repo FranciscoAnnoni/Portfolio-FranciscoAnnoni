@@ -53,7 +53,14 @@
   }
   .iconMoon{
     color: var(--primary-text-color);
-    font-size: 15px; /* Tamaño del icono */
+    font-size: 13px; /* Tamaño del icono */
+  }
+  .iconSun{
+    color: var(--foreground-color);
+    font-size: 18px; /* Tamaño del icono */
+  }
+  .iconSun:hover{
+    color: var(--primary-text-color);
   }
   
 /*Buton color*/
@@ -157,7 +164,7 @@ button:active {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
-  width: 102%;
+  width: 110%;
 }
 
 .tab-button.active {
@@ -199,10 +206,10 @@ button:active {
 
 /* Content (right section) */
 .content-container {
-  width: 75%; /* Ancho fijo del contenedor */
-  height: 100%; /* Asegura que siempre ocupe todo el alto */
-  padding: 0px 10px 10px 20px;
-  overflow-y: auto; /* Desplazamiento si el contenido es más largo */
+  width: 68%;
+  height: 110%;
+  padding: 0px 10px 10px 30px;
+  overflow-y: auto;
   font-family: var(--small-family);
 }
 

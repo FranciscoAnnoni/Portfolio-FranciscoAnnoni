@@ -30,7 +30,7 @@ export const App = () => {
     <>
     <FollowMouse/>
     <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
-    <div className="App">
+    <div className="App snap-container">
     <Introduction/>
     <About/>
     <Experience/>

@@ -6,11 +6,11 @@ import './Pages.css'
 
 const Contact = () => {
     return (
-        <section className="Flex contact" id="contact">
+        <section className="Flex contact section" id="contact">
         <div id="contact">
             <div className="numbered-heading contact-heading">
                 <h2 className="title-section">
-                Get In Touch
+                Contact
                 </h2>
             </div>
             <div className="contact-content">

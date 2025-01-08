@@ -5,9 +5,21 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth; /* Hace que el scroll sea suave */
 }
+
+/* Hacemos que todo el contenedor permita el scroll snapping */
+.snap-container {
+  scroll-snap-type: y mandatory; /* Habilita snapping en el eje vertical */
+  overflow-y: scroll;           /* Permite scroll en el contenedor */
+  height: 100%;                /* La altura del contenedor debe ocupar toda la ventana */
+  scroll-behavior: smooth;      /* Hace que el desplazamiento sea suave */
+}
+
 
 /* Variables de temas (se aplican automáticamente a nivel root) */
 [data-theme="light"] {
@@ -37,7 +49,7 @@ html {
   --blanco-crema: #f8eddc;
   --blanco-gris: #ccd6f6;
 
-  --gris: #8892b0;
+  --gris: #a8afc4;
   --gris-oscuro:#495670;
 
   --azul-oscuro-claro:#283853;

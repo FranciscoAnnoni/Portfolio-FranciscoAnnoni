@@ -3,7 +3,7 @@ import './Pages.css'
 const Introduction = () => {
     return (
         
-        <section className="Introduction" id="introduction" >
+        <section className="introduction section" id="introduction" >
         <div>
             <div  className="pt-5">
             <p  className="Small-text">Hi, my name is</p>

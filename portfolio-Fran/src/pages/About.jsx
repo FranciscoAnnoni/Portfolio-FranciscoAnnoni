@@ -7,7 +7,7 @@ import './Pages.css';
 
 const About = () => {
     return (
-        <section id="about" className="about__StyledAboutSection-sc-1ownso9-0 bNXWUU Flex" data-sr-id="0" style={{ visibility: 'visible', opacity: 1, transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)', transition: 'all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s' }}>
+        <section id="about" className="section about__StyledAboutSection-sc-1ownso9-0 bNXWUU Flex" data-sr-id="0" style={{ visibility: 'visible', opacity: 1, transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)', transition: 'all, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s' }}>
             <div className='about-content'>
                 <div className="numbered-heading">
                 <h2 className="title-section">About Me</h2>
