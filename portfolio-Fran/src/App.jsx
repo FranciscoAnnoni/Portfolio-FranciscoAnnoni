@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ScrollAnimation from './components/ScrollAnimation.jsx';
 
 
 // Importamos las páginas
@@ -22,22 +23,38 @@ export const App = () => {
 
   // Cuando cambie isDark, aplicamos el tema correspondiente
   useEffect(() => {
-    const theme = isDark ? "dark" : "light";
+    const theme = isDark ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', theme); // Cambiamos el tema en el <html>
   }, [isDark]);
 
   return (
     <>
-     <FollowMouse/>
-    <div className="App">
-    <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
-    <Introduction/>
-    <About/>
-    <Experience/>
-    <Work/>
-    <Contact/>
-    <Footer/>
-    </div>
+      <FollowMouse />
+      <div className="App">
+        <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
+        
+        <ScrollAnimation>
+          <Introduction />
+        </ScrollAnimation>
+        
+        <ScrollAnimation>
+          <About />
+        </ScrollAnimation>
+        
+        <ScrollAnimation>
+          <Experience />
+        </ScrollAnimation>
+        
+        <ScrollAnimation>
+          <Work />
+        </ScrollAnimation>
+        
+        <ScrollAnimation>
+          <Contact />
+        </ScrollAnimation>
+        
+        <Footer />
+      </div>
     </>
   );
 };

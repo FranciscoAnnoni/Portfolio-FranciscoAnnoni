@@ -9,6 +9,11 @@
   min-height: 100vh;   
  
 }
+
+.App > div {
+  will-change: opacity, transform;
+}
+
 .title{
   color: var(--primary-text-color);
 }
