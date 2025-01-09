@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 html,
@@ -10,15 +11,32 @@ body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth; /* Hace que el scroll sea suave */
+  overflow-x: hidden; /* Evita el overflow horizontal */
 }
 
-/* Hacemos que todo el contenedor permita el scroll snapping */
-.snap-container {
-  scroll-snap-type: y mandatory; /* Habilita snapping en el eje vertical */
-  overflow-y: scroll;           /* Permite scroll en el contenedor */
-  height: 100%;                /* La altura del contenedor debe ocupar toda la ventana */
-  scroll-behavior: smooth;      /* Hace que el desplazamiento sea suave */
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 16px; /* Ancho de la barra de desplazamiento */
 }
+
+::-webkit-scrollbar-track {
+  background: var(--background-color); /* Color de fondo de la pista de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-text-color); /* Color de la barra de desplazamiento */
+  border-radius: 10px; /* Bordes redondeados de la barra de desplazamiento */
+  border: 3px solid var(--background-color); /* Espacio alrededor de la barra de desplazamiento */
+  transition: background-color 0.3s ease; /* Transición para el efecto de hover */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--foreground-color); /* Color de la barra de desplazamiento al hacer hover */
+}
+
+
+
+
 
 
 /* Variables de temas (se aplican automáticamente a nivel root) */

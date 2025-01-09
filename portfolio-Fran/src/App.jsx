@@ -28,16 +28,16 @@ export const App = () => {
 
   return (
     <>
-    <FollowMouse/>
+     <FollowMouse/>
+    <div className="App">
     <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
-    <div className="App snap-container">
     <Introduction/>
     <About/>
     <Experience/>
     <Work/>
     <Contact/>
-    </div>
     <Footer/>
+    </div>
     </>
   );
 };

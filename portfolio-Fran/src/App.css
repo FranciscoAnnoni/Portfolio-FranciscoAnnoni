@@ -6,9 +6,9 @@
   background-color: var(--background-color);
   margin: 0;                  /* Elimina márgenes del navegador */
   width: 100%;
-  min-height: 100vh;       
+  min-height: 100vh;   
+ 
 }
-
 .title{
   color: var(--primary-text-color);
 }

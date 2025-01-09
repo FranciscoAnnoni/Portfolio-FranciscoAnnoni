@@ -26,7 +26,6 @@ export const FollowMouse = () => {
       window.removeEventListener('pointermove', handleMove);
     };
   }, [enabled]);
-  
 
   // Efecto para cambiar el estilo del cuerpo
   useEffect(() => {
