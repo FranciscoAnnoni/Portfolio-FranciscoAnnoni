@@ -240,14 +240,16 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
           </a>
         </div>
       </div>
+      <a href={projectLink} rel="noopener noreferrer" target="_blank">
       <div className="project-image">
-        <a href={projectLink} rel="noopener noreferrer" target="_blank">
+        
           <div>
             <img decoding="async" src={imagePath} alt={title} className="main-image" />
             <noscript></noscript>
           </div>
-        </a>
+        
       </div>
+      </a>
     </li>
   );
 };
