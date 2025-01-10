@@ -1,18 +1,27 @@
-[
-    {
-        "title": "Halcyon Theme",
-        "description": "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-        "technologies": ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-        "githubLink": "https://github.com/bchiang7/halcyon-site",
-        "projectLink": "https://halcyon-theme.netlify.com/",
+[    
+{
+    "title": "Tragui",
+    "description": "A Kotlin-based Android application developed using Jetpack Compose, designed to help users find cocktails based on their chosen beverage type, offering an engaging and smooth user experience.",
+    "technologies": ["Kotlin", "Jetpack Compose", "Android Studio", "Git","Cocktails API"],
+    "githubLink": "https://github.com/UTN-FRBA-Mobile/Tragui",
+    "projectLink": "https://github.com/UTN-FRBA-Mobile/Tragui",
+    "imagePath": "../images/tragui.png"
+},
+{
+    "title": "OfferHub",
+    "description": "A Kotlin-based Android application that centralizes promotions by collecting offers from banks. Developed using Kotlin, this app allows users to track, filter, and stay up-to-date on personalized promotions all in one place.",
+    "technologies": ["Kotlin", "Android Studio", "Git", "Firebase Database", "MVC Architecture", "Python", "Selenium"],
+    "githubLink": "https://github.com/FranciscoAnnoni/offerHub",
+    "projectLink": "https://github.com/FranciscoAnnoni/offerHub",
+    "imagePath": "../images/offerhub.png"
+},
+{
+        "title": "The Big Walrus",
+  "description": "A React-based Single Page Application designed for selling walrus NFTs. Built on the Solana blockchain, it features a sleek and responsive design for exploring and purchasing unique digital collectibles.",
+"technologies": ["React", "Node.js", "Git", "HTML", "CSS"],
+        "githubLink": "https://github.com/FranciscoAnnoni/big-walrus",
+        "projectLink": "https://www.bigwalrus.empressaria.com.ar/",
         "imagePath": "../images/bigWalrus.png"
-    },
-    {
-        "title": "Halcyon Theme",
-        "description": "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
-        "technologies": ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
-        "githubLink": "https://github.com/bchiang7/halcyon-site",
-        "projectLink": "https://halcyon-theme.netlify.com/",
-        "imagePath": "../images/bigWalrus.png"
-    }
+}
+
 ]

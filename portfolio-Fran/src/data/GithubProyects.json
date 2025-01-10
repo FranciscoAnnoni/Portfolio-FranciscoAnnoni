@@ -1,30 +1,31 @@
 [
     {
-        "title": "Project Title 1",
-        "description": "Project description goes here. It should be brief and to the point.",
-        "technologies": ["Technology 1", "Technology 2", "Technology 3"],
-        "githubLink": "https://github.com/tu-repo",
-        "projectLink": "https://tu-proyecto.com"
+        "title": "Live-Chat",
+        "description": "A real-time chat application with Node.js and WebSockets using Socket.IO for communication. It features message persistence via SQLite, allowing users to interact in real-time.",
+        "technologies": ["Node.js", "HTML", "Socket.IO", "SQLite", "@libsql/client"],
+        "githubLink": "https://github.com/FranciscoAnnoni/LiveChat",
+        "projectLink": "https://github.com/FranciscoAnnoni/LiveChat"
+    }
+    ,
+    {
+    "title": "Empressaria",
+    "description": "Empressaria is an e-commerce website designed for efficient product browsing. It loads a product catalog dynamically from a JSON file without requiring a database.",
+    "technologies": ["JavaScript", "ES6 Modules", "HTML", "CSS"],
+    "githubLink": "https://github.com/FranciscoAnnoni/e-comerceReact",
+    "projectLink": "https://www.devannoni.empressaria.com.ar/"
     },
     {
-        "title": "Project Title 2",
-        "description": "Another project description.",
-        "technologies": ["Tech 1", "Tech 2", "Tech 3"],
-        "githubLink": "https://github.com/otro-repo",
-        "projectLink": "https://otro-proyecto.com"
+        "title": "Korean Character Recognition with AI",
+        "description": "A machine learning project utilizing Convolutional Neural Networks (CNN) to recognize Korean Hangul characters from images.",
+        "technologies": ["TensorFlow", "OpenCV", "Matplotlib", "NumPy"],
+        "githubLink": "https://github.com/FranciscoAnnoni/IA",
+        "projectLink": "https://github.com/FranciscoAnnoni/IA"
     },
     {
-        "title": "Project Title 3",
-        "description": "Another project description.",
-        "technologies": ["Tech 1", "Tech 2", "Tech 3"],
-        "githubLink": "https://github.com/otro-repo",
-        "projectLink": "https://otro-proyecto.com"
-    },
-    {
-        "title": "Project Title 4",
-        "description": "Another project description.",
-        "technologies": ["Tech 1", "Tech 2", "Tech 3"],
-        "githubLink": "https://github.com/otro-repo",
-        "projectLink": "https://otro-proyecto.com"
+        "title": "Automatic MongoDB Replica Set Setup with Shell Script",
+        "description": "A shell script designed to automatically configure a MongoDB replica set across three nodes. This script sets up the configuration, connects the nodes, and ensures proper synchronization of the replica set members.",
+        "technologies": ["Shell Script", "MongoDB"],
+        "githubLink": "https://github.com/FranciscoAnnoni/MongoDB",
+        "projectLink": "https://github.com/FranciscoAnnoni/MongoDB"
     }
 ]
