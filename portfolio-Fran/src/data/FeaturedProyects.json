@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Halcyon Theme",
+        "description": "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
+        "technologies": ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
+        "githubLink": "https://github.com/bchiang7/halcyon-site",
+        "projectLink": "https://halcyon-theme.netlify.com/",
+        "imagePath": "../images/bigWalrus.png"
+    },
+    {
+        "title": "Halcyon Theme",
+        "description": "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.",
+        "technologies": ["VS Code", "Sublime Text", "Atom", "iTerm2", "Hyper"],
+        "githubLink": "https://github.com/bchiang7/halcyon-site",
+        "projectLink": "https://halcyon-theme.netlify.com/",
+        "imagePath": "../images/bigWalrus.png"
+    }
+]

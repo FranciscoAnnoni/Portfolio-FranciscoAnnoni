@@ -1,19 +1,6 @@
 
 /*Follow Mouse*/
-/*
-.cursor {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 1.5px solid var(--foreground-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    background-color: transparent;
-    transition: opacity 0.2s ease, transform 0.1s ease;
-  }
-  */
-  
+
   .cursor-dot {
     pointer-events: none;
     position: absolute;

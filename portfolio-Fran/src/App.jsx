@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import ScrollAnimation from './components/ScrollAnimation.jsx';
 
-
 // Importamos las páginas
 import Introduction from './pages/Introduction.jsx'
 import About from './pages/About.jsx'

@@ -3,47 +3,12 @@ import './Navbar.css';
 import { ButtonColor } from './Components.jsx';
 import { Toggle } from './Components.jsx';
 
+
 const NavBar = ({ isChecked, handleChange }) => {
   const [activeLink, setActiveLink] = useState('');
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    let scrolling = false;
-
-    const handleScroll = () => {
-      scrolling = true;
-
-      // Solo ejecutar una vez por frame usando requestAnimationFrame
-      if (scrolling) {
-        window.requestAnimationFrame(() => {
-          scrolling = false;
-
-          const sections = document.querySelectorAll('section');
-          const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-          let foundActive = false; // Bandera para evitar múltiples detecciones
-          sections.forEach((section) => {
-            const rect = section.getBoundingClientRect();
-            const sectionTop = rect.top + window.scrollY;
-            const sectionHeight = rect.height;
-
-            if (
-              !foundActive && 
-              scrollPosition >= sectionTop && 
-              scrollPosition < sectionTop + sectionHeight
-            ) {
-              const currentId = section.getAttribute('id');
-              setActiveLink(`#${currentId}`);
-              foundActive = true; // Evitar sobreescribir si ya encontramos una sección
-            }
-          });
-        });
-      }
-    };
-
-    // Event listener para manejar scroll
-    window.addEventListener('scroll', handleScroll);
-
     // Desplazarse a la sección correcta al cargar la página
     const hash = window.location.hash;
     if (hash) {
@@ -53,10 +18,6 @@ const NavBar = ({ isChecked, handleChange }) => {
         setActiveLink(hash);
       }
     }
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
 
   const handleNavClick = (hash) => {
@@ -69,7 +30,7 @@ const NavBar = ({ isChecked, handleChange }) => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-left">
+       <div className="navbar-left">
         <a href='/#introduction'
           className="logo"
           onMouseEnter={() => setIsHovered(true)}
