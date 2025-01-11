@@ -80,22 +80,15 @@ export const Toggle = ({ handleChange, isChecked }) => {
 };
 
 //----------------------------------------------------------------------------// Boton vase de la App
-export const ButtonColor = ({ text, className }) => {
+
+// eslint-disable-next-line react/prop-types
+export const ButtonColor = ({ children, className  }) => {
   return (
     <button className={className}>
-      <span aria-hidden="true">{text}</span>
+      <span aria-hidden="true">{children}</span>
       <span></span>
-      <span>{text}</span>
+      <span>{children}</span>
     </button>
-  );
-};
-
-//----------------------------------------------------------------------------// Boton vase de la App
-export const ButtonNav = ({ text, href, onClick }) => {
-  return (
-    <div className="button-nav-wrapper">
-    <a className="button-nav" href="/your-link" target="_blank" rel="noopener noreferrer">{text}</a>
-    </div>
   );
 };
 

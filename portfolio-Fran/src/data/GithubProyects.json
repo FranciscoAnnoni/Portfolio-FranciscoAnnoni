@@ -24,7 +24,7 @@
     {
         "title": "Automatic MongoDB Replica Set Setup with Shell Script",
         "description": "A shell script designed to automatically configure a MongoDB replica set across three nodes. This script sets up the configuration, connects the nodes, and ensures proper synchronization of the replica set members.",
-        "technologies": ["Shell Script", "MongoDB"],
+        "technologies": ["Shell Script", "MongoDB","Linux"],
         "githubLink": "https://github.com/FranciscoAnnoni/MongoDB",
         "projectLink": "https://github.com/FranciscoAnnoni/MongoDB"
     }

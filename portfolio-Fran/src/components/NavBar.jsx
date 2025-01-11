@@ -2,11 +2,18 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import { ButtonColor } from './Components.jsx';
 import { Toggle } from './Components.jsx';
+import { IoMenu,IoClose } from "react-icons/io5";
+
 
 
 const NavBar = ({ isChecked, handleChange }) => {
   const [activeLink, setActiveLink] = useState('');
   const [isHovered, setIsHovered] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+};
 
   useEffect(() => {
     // Desplazarse a la sección correcta al cargar la página
@@ -91,10 +98,33 @@ const NavBar = ({ isChecked, handleChange }) => {
 
         <div className='buttonNav'>
           <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
-            <ButtonColor text="Resume" />
+            <ButtonColor >
+              Resume
+             </ButtonColor>
           </a>
         </div>
       </div>
+
+      <div className='navbar-mobile'>
+      <a className="darkLight-icon-mobile">
+            <Toggle isChecked={isChecked} handleChange={handleChange} />
+      </a>
+
+      <div className="navbar-menu-icon" onClick={toggleMenu}>
+
+      <ButtonColor >
+      {menuOpen ? <IoClose  size={30}/>: <IoMenu size={30} />}
+      </ButtonColor>
+      </div>
+            {menuOpen && (
+                <div className="navbar-menu">
+                    <a href="#about" onClick={toggleMenu}>About</a>
+                    <a href="#experience" onClick={toggleMenu}>Experience</a>
+                    <a href="#work" onClick={toggleMenu}>Work</a>
+                    <a href="#contact" onClick={toggleMenu}>Contact</a>
+                </div>
+            )}
+     </div>       
     </nav>
   );
 };

@@ -21,7 +21,9 @@ I'm always on the lookout for new opportunities! Feel free to reach out and let 
             
             <div className='button-contact'>
           <a className="mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=franciscoannoni@gmail.com&amp;su=Consulta%20Web" target="_blank" rel="noopener noreferrer">
-          <ButtonColor text="Contact Me!" className="button-contact-personal"  />
+          <ButtonColor className="button-contact-personal">
+            Contact Me!
+          </ButtonColor>
           </a>
         </div>
 

@@ -97,8 +97,8 @@
 .title-container {
     display: flex;
     position: relative;
-    width: 260px; /* Cambia según el ancho máximo del texto más largo */
-    height: 2rem; /* Mantén el mismo valor para ambos textos */
+    width: 280px;
+    height: 2rem;
     overflow: hidden;
 }
 
@@ -161,3 +161,67 @@
     align-items: center;
     justify-content: space-between;
   }
+
+
+  /*TELEFONOS MOVILES*/
+    .navbar-mobile {
+        display: none;
+    }
+
+
+  .navbar-menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--foreground-color);
+    margin-right: 30px;
+}
+
+.navbar-menu {
+    z-index: -100;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    right: -250px; /* Start off-screen */
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.3s ease; /* Smooth transition */
+}
+
+.navbar-menu.open {
+    right: 0; /* Move on-screen */
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+@media (max-width: 950px) {
+    .navbar-right {
+        display: none;
+    }
+    .navbar-mobile {
+        display: flex;
+    }
+
+    .navbar-menu-icon {
+        display: flex;
+    }
+
+    .navbar-menu {
+        padding-top: 60px;
+        right: 0px; /* Start off-screen */
+        height: 100%;
+    }
+    .darkLight-icon-mobile{
+        margin-right: 10px;
+    }
+}
