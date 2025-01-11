@@ -15,6 +15,17 @@ const NavBar = ({ isChecked, handleChange }) => {
     setMenuOpen(!menuOpen);
 };
 
+useEffect(() => {
+  const appElement = document.querySelector('.App'); // Selecciona la clase 'App'
+  if (appElement) {
+      if (menuOpen) {
+          appElement.classList.add('app-blurred');
+      } else {
+          appElement.classList.remove('app-blurred');
+      }
+  }
+}, [menuOpen]);
+
   useEffect(() => {
     // Desplazarse a la sección correcta al cargar la página
     const hash = window.location.hash;
