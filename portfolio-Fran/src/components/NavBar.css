@@ -191,11 +191,17 @@
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     flex-direction: column;
     align-items: flex-start;
-    transition: right 0.9s ease; /* Smooth transition */
+opacity: 0; /* Invisibilidad inicial para un efecto más limpio */
+    pointer-events: none; /* No permite interacciones iniciales */
 }
 
 .navbar-menu.open {
-    right: 0; /* Move on-screen */
+    right: 0; /* Trae el menú a la vista */
+    opacity: 1; /* Haz que el menú sea visible */
+    pointer-events: all; /* Permite interacciones */
+    transition: right 0.9s ease; /* Suave transición para el desplazamiento */
+    
+
 }
 
 .navbar-menu a {
@@ -203,6 +209,7 @@
     text-decoration: none;
     padding: 10px 0;
 }
+
 .app-blurred {
     filter: blur(5px);
     transition: filter 0.3s ease; /* Smooth transition */
@@ -221,11 +228,6 @@
         display: flex;
     }
 
-    .navbar-menu {
-        padding-top: 60px;
-        right: 0px; /* Start off-screen */
-        height: 100%;
-    }
     .darkLight-icon-mobile{
         margin-right: 40px;
     }

@@ -128,7 +128,7 @@ useEffect(() => {
       </ButtonColor>
       </div>
             {menuOpen && (
-                <div className="navbar-menu">
+                <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
                     <a href="#about" onClick={toggleMenu}>About</a>
                     <a href="#experience" onClick={toggleMenu}>Experience</a>
                     <a href="#work" onClick={toggleMenu}>Work</a>
