@@ -7,7 +7,6 @@
   margin: 0;                  /* Elimina márgenes del navegador */
   width: 100%;
   min-height: 100vh;   
- 
 }
 
 .App > div {
@@ -28,3 +27,5 @@ section {
   filter: blur(5px);
   transition: filter 0.3s ease; /* Smooth transition */
 }
+
+

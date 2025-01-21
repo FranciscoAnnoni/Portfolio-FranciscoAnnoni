@@ -58,6 +58,9 @@ useEffect(() => {
             <span className={`title-main ${isHovered ? "slide-out" : ""}`}>F.A.</span>
             <span className={`title-hover ${isHovered ? "slide-in" : ""}`}>Francisco Annoni</span>
           </div>
+          <div className="title-small">
+            <span className='title-main'>F.A.</span>
+          </div>
         </a>
       </div>
 

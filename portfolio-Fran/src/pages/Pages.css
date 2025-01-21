@@ -185,15 +185,14 @@
 }
 
 .kNIdQM ul.skills-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(140px, 200px));
-    gap: 0px 10px;
-    padding: 0px;
-    margin: 20px 0px 0px;
-    overflow: hidden;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 200px));
+  gap: 0px 10px;
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
 }
-
 /*apartado de la foto del about-me*/
 .about__StyledPic-sc-1ownso9-2 .wrapper {
     transition: var(--transition);
@@ -340,4 +339,73 @@ margin-top: 20px;
 .button-contact-personal span{
    width: 200px; /* Ajusta el padding según tus necesidades */
    height: 60px;
+  }
+
+
+  /*Media querrys*/
+  @media (max-width: 780px) {
+    .numbered-heading {
+      display: inline;
+    }
+
+    .numbered-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin-left: 25px;
+    background-color: var(--secondary-text-color);
+    margin-bottom: 15px;
+    margin-left: 0px;
+  }
+    .about__StyledPic-sc-1ownso9-2 .wrapper{
+      display: none;
+    }
+       
+    .bNXWUU .inner {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .image-section {
+      order: 2; /* Move image below text */
+      flex-basis: 100%;
+  }
+
+  .kNIdQM ul.skills-list {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    justify-content: center;
+  }
+
+  }
+
+  @media (max-width: 600px) {
+    .Small-text{
+      font-size: 12px;
+    }
+    .Introduction-title {
+      font-size: 2.5rem;
+    }
+    
+    .Introduction-subtitle {
+      font-size: 2.6rem;
+    }
+    
+    .Introduction-p{
+    font-size: 14px;
+    line-height: 1.6; 
+    }
+    .bNXWUU .inner h2 {
+      font-size: 20px;
+  }
+
+  .bNXWUU .inner p {
+      font-size: 14px;
+  }
+  .skills-list span{
+    font-size: 14px;
+  }
+ 
   }

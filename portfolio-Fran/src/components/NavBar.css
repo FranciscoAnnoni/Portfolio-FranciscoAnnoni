@@ -101,6 +101,17 @@
     height: 2rem;
     overflow: hidden;
 }
+.title-small{
+    position: relative;
+    width: 60px;
+    height: 2rem;
+    overflow: hidden;
+    display: none;
+}
+
+.title-main:hover{
+    color: var(--foreground-color);
+}
 
 .title-main {
     position: absolute; /* Los posicionamos absolutos para que partan del mismo punto */
@@ -233,3 +244,15 @@ opacity: 0; /* Invisibilidad inicial para un efecto más limpio */
     }
 
 }
+
+@media (max-width: 490px) {
+    .title-small{
+        display: flex;
+    }
+    .title-container{
+      display: none;
+    }
+    .logo {
+        margin-left: 25px;
+    }
+  }
