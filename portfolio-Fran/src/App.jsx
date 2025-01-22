@@ -28,7 +28,9 @@ export const App = () => {
 
   return (
     <>
-      <FollowMouse />
+         <div className="follow-mouse">
+                <FollowMouse />
+            </div>
         <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
         <div className="App">
         <ScrollAnimation>

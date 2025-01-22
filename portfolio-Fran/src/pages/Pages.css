@@ -344,6 +344,8 @@ margin-top: 20px;
 
   /*Media querrys*/
   @media (max-width: 780px) {
+
+
     .numbered-heading {
       display: inline;
     }
@@ -382,6 +384,11 @@ margin-top: 20px;
   }
 
   @media (max-width: 600px) {
+
+    .tabs-container {
+      display: flex;
+    }
+
     .Small-text{
       font-size: 12px;
     }
@@ -399,13 +406,13 @@ margin-top: 20px;
     }
     .bNXWUU .inner h2 {
       font-size: 20px;
-  }
+    }
 
-  .bNXWUU .inner p {
+    .bNXWUU .inner p {
       font-size: 14px;
-  }
-  .skills-list span{
+    }
+    .skills-list span{
     font-size: 14px;
-  }
+    }
  
   }

@@ -132,6 +132,7 @@ button:active {
   position: relative;
 }
 
+
 /* Tab Button Styling */
 .tab-button {
   color:var(--secondary-text-color);
@@ -187,7 +188,7 @@ button:active {
 
 /* Content (right section) */
 .content-container {
-  width: 68%;
+  max-width: 68%;
   height: 110%;
   padding: 0px 10px 10px 30px;
   overflow-y: auto;
@@ -477,6 +478,33 @@ button:active {
   z-index: 1; /* Asegura que la imagen esté por encima de la superposición */
 }
 
+@media (max-width: 780px) {
+  .tab-button{
+    font-size: 15px;
+  }
+  .titulo{
+    font-size: 1.4rem;
+  }
+  .subtitulo{
+    font-size: 15px;
+  }
+  .texto{
+    font-size: 14px;
+  }
+  .app-container{
+    display: inline;
+  }
+  .tabs-container {
+    width: 100%;
+    flex-direction: row;
+  }
+  .content-container{
+    max-width: 100%;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
 @media (min-width: 1080px) {
   .main-image {
     width: 400px;
@@ -485,4 +513,6 @@ button:active {
     margin-top: 90px;
   }
 }
+
+
 

@@ -28,4 +28,10 @@ section {
   transition: filter 0.3s ease; /* Smooth transition */
 }
 
+  /*Media querrys*/
+  @media (max-width: 900px) {
+      .follow-mouse {
+          display: none;
+      }
 
+  }
