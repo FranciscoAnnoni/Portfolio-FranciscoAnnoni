@@ -377,7 +377,7 @@ margin-top: 20px;
   }
 
   .kNIdQM ul.skills-list {
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     justify-content: center;
   }
 

@@ -130,7 +130,12 @@ button:active {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden; /* Habilita barra de desplazamiento horizontal */
+  max-width: 100%; /* Asegura que no se exceda del ancho del contenedor */
+  box-sizing: border-box;
+
 }
+
 
 
 /* Tab Button Styling */
@@ -147,6 +152,7 @@ button:active {
   align-items: center;
   transition: all 0.3s ease;
   width: 110%;
+  
 }
 
 .tab-button.active {
@@ -478,6 +484,18 @@ button:active {
   z-index: 1; /* Asegura que la imagen esté por encima de la superposición */
 }
 
+@media (min-width: 1080px) {
+  .main-image {
+    width: 400px;
+  }
+  .project-links-feature{
+    margin-top: 90px;
+  }
+}
+
+
+
+
 @media (max-width: 780px) {
   .tab-button{
     font-size: 15px;
@@ -491,9 +509,11 @@ button:active {
   .texto{
     font-size: 14px;
   }
-  .app-container{
+  .app-container {
     display: inline;
-  }
+    overflow: hidden;
+}
+
   .tabs-container {
     width: 100%;
     flex-direction: row;
@@ -505,14 +525,24 @@ button:active {
   }
 }
 
-@media (min-width: 1080px) {
-  .main-image {
-    width: 400px;
-  }
-  .project-links-feature{
-    margin-top: 90px;
-  }
+
+@media (max-width: 360px) {
+  .tabs-container {
+    text-align: center;
+    overflow-x: auto; /* Habilita barra de desplazamiento horizontal */
+    max-width: 90%; /* Asegura que no se exceda del ancho del contenedor */
+    box-sizing: border-box;
+}
+.tab-button {
+  width: 70%;
+}
+.tabs-container button {
+    white-space: nowrap; /* Evita que el texto de los botones haga un salto de línea */
+    flex-shrink: 0; /* Evita que los botones se reduzcan */
+}
+.app-container {
+  display: inline;
+  overflow: hidden;
 }
 
-
-
+}
