@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const ScrollAnimation = ({ children }) => {
+const ScrollAnimation = ({  children, value = 0.2 }) => {
   const [ref, inView] = useInView({
-    threshold: 0.2, // Trigger when 20% of the element is visible
+    threshold: value, // Trigger when 20% of the element is visible
     triggerOnce: true, // Trigger only once
   });
 

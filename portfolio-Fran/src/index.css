@@ -49,6 +49,7 @@ body {
   --sombra:var(--sombra-light);
   --thirty-text-color:var(--gris-oscuro);
   --background-color-card: var(--blanco-crema-oscuro);
+  --navbar-menu-color: var(--blanco-crema-oscuro);
 }
 
 [data-theme="dark"] {
@@ -59,11 +60,12 @@ body {
   --thirty-text-color:var(--blanco-gris);
   --sombra: var(--sombra-dark);
   --background-color-card: var(--azul-oscuro-claro);
+  --navbar-menu-color: var(--azul-oscuro-claro);
 }
 
 :root {
 
-  --blanco-crema-oscuro: #d7c9b3;
+  --blanco-crema-oscuro: #ebe1c9;
   --blanco-crema: #f8eddc;
   --blanco-gris: #ccd6f6;
 

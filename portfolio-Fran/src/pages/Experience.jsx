@@ -1,10 +1,10 @@
 import './Pages.css'
-
 import { TabSection } from '../components/Components';
- 
+
 // Usarlos en tu componente
 
 const Experience = () => {
+
     return (
         
         <section className="Flex experience section" id="experience">
@@ -14,7 +14,9 @@ const Experience = () => {
                 Where I’ve Worked
                 </h2>
             </div>
-            <TabSection/>
+           
+        <TabSection/>
+
         </div>
         
         </section>

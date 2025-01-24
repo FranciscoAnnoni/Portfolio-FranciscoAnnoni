@@ -45,7 +45,7 @@ export const App = () => {
           <Experience />
         </ScrollAnimation>
         
-        <ScrollAnimation>
+        <ScrollAnimation value={0.1}>
           <Work />
         </ScrollAnimation>
         

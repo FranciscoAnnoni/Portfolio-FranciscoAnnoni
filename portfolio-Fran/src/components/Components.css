@@ -459,7 +459,9 @@ button:active {
 .project-image:hover::before {
   opacity: 0; /* Desaparece al hacer hover sobre el componente o la imagen */
 }
-
+.project-image-phone{
+  display: none;
+}
 .project-image::before {
   content: '';
   position: absolute;
@@ -477,6 +479,7 @@ button:active {
 }
 
 .main-image {
+  max-width: 420px;
   width: 100%;
   height: auto;
   border-radius: 5px;
@@ -486,7 +489,7 @@ button:active {
 
 @media (min-width: 1080px) {
   .main-image {
-    width: 400px;
+    width: auto;
   }
   .project-links-feature{
     margin-top: 90px;
@@ -523,9 +526,61 @@ button:active {
     width: 100%;
     margin-top: 15px;
   }
+
+
+  .project-description {
+    max-width: 450px;
+}
+
+  .project-image-link {
+    display: none;
+  }
+  .project-text{
+    padding-left: 20px;
+  }
+  
+  .project-image-phone {
+    margin-top: 30px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+.project-tech-list-featured {
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  list-style: none; /* Elimina los puntos de lista */
+  padding: 0; /* Elimina el padding predeterminado de la lista */
+  margin: 0 auto; /* Asegura el centrado del ul dentro de su contenedor */
+  text-align: center; /* Centra el texto dentro de cada li */
 }
 
 
+}
+
+@media (max-width: 600px){
+  .project-text{
+    padding-left: 0px;
+  }
+  .project-text p{
+    font-size: 14px;
+  }
+  .project-title-work a{
+    font-size: 26px;
+  }
+  .project-description p {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 500px){
+  .project-links-feature {
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+  }
+}
 @media (max-width: 360px) {
   .tabs-container {
     text-align: center;
@@ -540,6 +595,7 @@ button:active {
     white-space: nowrap; /* Evita que el texto de los botones haga un salto de línea */
     flex-shrink: 0; /* Evita que los botones se reduzcan */
 }
+
 .app-container {
   display: inline;
   overflow: hidden;

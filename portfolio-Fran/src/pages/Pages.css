@@ -345,7 +345,6 @@ margin-top: 20px;
   /*Media querrys*/
   @media (max-width: 780px) {
 
-
     .numbered-heading {
       display: inline;
     }
@@ -414,5 +413,10 @@ margin-top: 20px;
     .skills-list span{
     font-size: 14px;
     }
- 
+    
+    .contact-content p {
+      max-width: 350px;
+      font-size: 14px;
+    }
+
   }

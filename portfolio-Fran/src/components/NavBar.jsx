@@ -130,14 +130,27 @@ useEffect(() => {
       {menuOpen ? <IoClose  size={30}/>: <IoMenu size={30} />}
       </ButtonColor>
       </div>
-            {menuOpen && (
-                <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
-                    <a href="#about" onClick={toggleMenu}>About</a>
-                    <a href="#experience" onClick={toggleMenu}>Experience</a>
-                    <a href="#work" onClick={toggleMenu}>Work</a>
-                    <a href="#contact" onClick={toggleMenu}>Contact</a>
+                <div className={`navbar-menu ${menuOpen ? "open" : "close"}`}>
+                  <div className='content-menu'>
+                  <ol>
+                    <li><a href="#about" onClick={toggleMenu}>About</a></li>
+                    <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+                    <li><a href="#work" onClick={toggleMenu}>Work</a></li>
+                    <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+                 </ol>
+                 
+                
+                  <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
+                  <div className='button-menu-phone'>
+                    <ButtonColor >
+                      Resume
+                    </ButtonColor>
+                    </div>
+                  </a>
+                  
+                  </div>
                 </div>
-            )}
+          
      </div>       
     </nav>
   );

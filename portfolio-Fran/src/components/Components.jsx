@@ -6,6 +6,7 @@ import { FaMouse, FaMousePointer } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { IoFolderOutline } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
+
 //----------------------------------------------------------------------------// Sigue el mouse
 export const FollowMouse = () => {
   const [enabled, setEnabled] = useState(true);
@@ -93,41 +94,8 @@ export const ButtonColor = ({ children, className  }) => {
 };
 
 //----------------------------------------------------------------------------// Scroll Section
-
-const tabs = [
-  {
-    id: "panel-0",
-    label: "Data Architect",
-    title: "Data Architect - DBlandIT",
-    date: "Dec 2021 - Aug 2024",
-    content: [
-      "Implemented custom Bash scripting for log optimization and analysis, using Logrotate and Logstash to streamline data management and ensure system efficiency.",
-      "Designed and maintained MongoDB databases, configured ReplicaSets, and optimized database performance to meet the growing needs of the company.",
-      "Developed expertise in big data ecosystems such as Hadoop, Cloudera Manager, NiFi, HDFS, and YARN, leading data integration and management projects.",
-      "Utilized monitoring tools such as Kibana and Grafana, as well as others like Prometheus and ElasticSearch, to ensure system health and performance.",
-    ],
-  },
-  {
-    id: "panel-1",
-    label: "Researcher",
-    title: "Research and Development Intern - UTN",
-    date: "Apr 2020 - Dec 2021",
-    content: [
-      "I collaborated with the teaching team at UDB Chemistry to develop a platform for administering exams and storing responses during the pandemic.",
-      "The platform was built using Google Suite and Google's set of tools, managing channels and sequences to configure a spreadsheet for recording students' grades, which was later used for analysis and conclusions.",
-    ],
-  },
-  {
-    id: "panel-2",
-    label: "Intership",
-    title: "Web Page Design - Intership at High School",
-    date: "Spring 2017 & 2018",
-    content: [ 
-      "Assisted in the creation of the student record page for the school, helping design and implement a platform for managing student data.",
-      "Collaborated on the development of a basic webpage to showcase upcoming school events, providing an easy-to-use interface for students and teachers.",
-    ],
-  },
-];
+import ExperienceData from '../data/ExperienceData.json';
+const tabs = ExperienceData;
 
 export const TabSection = () => {
   const [activeTab, setActiveTab] = useState("panel-0");
@@ -168,6 +136,7 @@ export const TabSection = () => {
   );
 };
 
+//----------------------------------------------------------------------------// Proyectos
 export const ProjectCard = ({ title, description, technologies, githubLink, projectLink }) => {
   return (
       <li className="projects__StyledProject-sc-1v1fime-1 gJHaRi">
@@ -218,12 +187,21 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
           <div className="project-description">
             <p>{description}</p>
           </div>
+        </div>
+          <a href={projectLink} rel="noopener noreferrer" target="_blank" className="project-image-phone">
+      <div className="project-image-phone-div">
+          <div>
+            <img decoding="async" src={imagePath} alt={title} className="main-image" />
+          </div>
+      </div>
+      </a>
+
           <ul className="project-tech-list-featured">
             {technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
           </ul>
-        </div>
+        
         <div className="project-links-feature">
           <a href={githubLink} aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
             <FaGithub />
@@ -233,12 +211,11 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
           </a>
         </div>
       </div>
-      <a href={projectLink} rel="noopener noreferrer" target="_blank">
+      <a href={projectLink} rel="noopener noreferrer" target="_blank" className="project-image-link">
       <div className="project-image">
-        
           <div>
             <img decoding="async" src={imagePath} alt={title} className="main-image" />
-            <noscript></noscript>
+            
           </div>
         
       </div>

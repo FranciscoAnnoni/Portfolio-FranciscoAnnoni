@@ -188,37 +188,94 @@
     margin-right: 30px;
 }
 
+
+
 .navbar-menu {
+    text-align: center;
     z-index: -500;
     display: flex;
     position: fixed;
-    top: 89px;
+    top: 88px;
     right: -250px; /* Start off-screen */
     height: 100%;
     width: 250px;
-    background-color: #333;
-    color: white;
+    background-color:var(--navbar-menu-color);
     padding: 20px;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     flex-direction: column;
     align-items: flex-start;
 opacity: 0; /* Invisibilidad inicial para un efecto más limpio */
     pointer-events: none; /* No permite interacciones iniciales */
+    
 }
+
 
 .navbar-menu.open {
     right: 0; /* Trae el menú a la vista */
     opacity: 1; /* Haz que el menú sea visible */
     pointer-events: all; /* Permite interacciones */
     transition: right 0.9s ease; /* Suave transición para el desplazamiento */
-    
+}
+
+.navbar-menu.close {
+    right: 1; /* Trae el menú a la vista */
+    opacity: 1; /* Haz que el menú sea visible */
+    pointer-events: all; /* Permite interacciones */
+    transition: right 0.9s ease; /* Suave transición para el desplazamiento */
+}
+
+.content-menu {
+    margin-top: 46px;
+}
+
+/* Navigation Items */
+.navbar-menu ol {
+    counter-reset: li 0; /* Inicia el contador desde 0 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-menu ol li {
+    counter-increment: li 1; /* Incrementa el contador */
+    margin: 0 auto 20px;
+    font-size: clamp(var(--fz-sm), 4vw, var(--fz-lg));
+}
+
+.navbar-menu ol a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-family: var(--primary-family);
+    font-size: 25px;
+    position: relative;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 3px 20px 20px;
+    width: 100%;
+}
+
+.navbar-menu ol a:hover {
+    color: var(--foreground-color);
 
 }
 
-.navbar-menu a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 0;
+.navbar-menu ol li::before {
+    position: relative;
+    bottom: 4px;
+    content: "0" counter(li) ".";
+    margin-right: 10px;
+    color: var(--foreground-color);
+    font-family: var(--thirt-family);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.button-menu-phone button span:nth-of-type(3){
+    --bg: var(--navbar-menu-color);
 }
 
 .app-blurred {
