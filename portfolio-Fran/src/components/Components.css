@@ -115,7 +115,7 @@ button:active {
   margin: 0;
   padding: 0;
   overflow: hidden;
-
+height: 450px;
 }
 
 /* Maintain tab width */
