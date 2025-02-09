@@ -1,15 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { ButtonColor } from './Components.jsx';
 import { Toggle } from './Components.jsx';
 import { IoMenu,IoClose } from "react-icons/io5";
 
 
-
 const NavBar = ({ isChecked, handleChange }) => {
   const [activeLink, setActiveLink] = useState('');
   const [isHovered, setIsHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuRef = useRef(null); // Referencia para el menú
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false); // Cierra el menú si el clic fue fuera del menú
+      }
+    };
+
+    const handleScroll = () => {
+      setMenuOpen(false); // Cierra el menú si se hace scroll
+    };
+
+ 
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("wheel", handleScroll); // Detecta scroll en mouse
+      window.addEventListener("touchmove", handleScroll); // Detecta scroll en móviles
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("wheel", handleScroll); // Detecta scroll en mouse
+      window.removeEventListener("touchmove", handleScroll); // Detecta scroll en móviles
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll); // Detecta scroll en móviles
+    };
+  }, [menuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -119,7 +149,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className='navbar-mobile'>
+       <div className='navbar-mobile' ref={menuRef}>
       <a className="darkLight-icon-mobile">
             <Toggle isChecked={isChecked} handleChange={handleChange} />
       </a>
@@ -138,7 +168,6 @@ useEffect(() => {
                     <li><a href="#work" onClick={toggleMenu}>Work</a></li>
                     <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
                  </ol>
-                 
                 
                   <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
                   <div className='button-menu-phone'>
