@@ -1,10 +1,10 @@
-Francisco Annoni - Portfolio
+#Francisco Annoni - Portfolio
 
 Welcome to my portfolio repository! 🚀 This project showcases my work, experience, and skills as a Full Stack Engineer.
 
-📸 Screenshots
+##📸 Screenshots
 
-🛠 Technologies Used
+##🛠 Technologies Used
 
 This project was built using the following technologies:
 
@@ -20,7 +20,7 @@ HTML - Structure of the webpage
 
 CSS - Styling and layout
 
-🚀 Getting Started
+##🚀 Getting Started
 
 Prerequisites
 
@@ -48,7 +48,7 @@ Start the development server:
 
 npm start
 
-📬 Contact
+##📬 Contact
 
 If you'd like to reach out, feel free to connect with me on:
 
