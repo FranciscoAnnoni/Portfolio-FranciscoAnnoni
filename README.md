@@ -4,54 +4,50 @@ Welcome to my portfolio repository! 🚀 This project showcases my work, experie
 
 ## 📸 Screenshots
 
+<!-- Add screenshots here -->
+
 ## 🛠 Technologies Used
 
 This project was built using the following technologies:
 
-Git - Version control system
-
-React - Frontend library for building user interfaces
-
-NPM - Package manager for JavaScript
-
-JavaScript (ES6+) - Core programming language
-
-HTML - Structure of the webpage
-
-CSS - Styling and layout
+- **Git** - Version control system
+- **React** - Frontend library for building user interfaces
+- **NPM** - Package manager for JavaScript
+- **JavaScript (ES6+)** - Core programming language
+- **HTML** - Structure of the webpage
+- **CSS** - Styling and layout
 
 ## 🚀 Getting Started
 
-Prerequisites
+### Prerequisites
 
 Make sure you have the following installed:
 
-Node.js & NPM
+- **Node.js & NPM**
+- **Git**
 
-Git
+### Installation
 
-Installation
 
-Clone the repository:
 
+```bash
+//Clone the repository:
 git clone https://github.com/yourusername/portfolio.git
 
-Navigate into the project directory:
-
+//Navigate into the project directory:
 cd portfolio
 
-Install dependencies:
-
+//Install dependencies:
 npm install
 
-Start the development server:
+//Start the development server:
+npm run dev
+```
 
-npm start
-
-## 📬 Contact
-
+### 📬 Contact
 If you'd like to reach out, feel free to connect with me on:
 
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/francisco-annoni)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/franciscoannoni)
+
