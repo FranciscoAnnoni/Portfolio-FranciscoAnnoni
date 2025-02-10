@@ -4,7 +4,7 @@
     "description": "A Kotlin-based Android application developed using Jetpack Compose, designed to help users find cocktails based on their chosen beverage type, offering an engaging and smooth user experience.",
     "technologies": ["Kotlin", "Jetpack Compose", "Android Studio", "Git","Cocktails API"],
     "githubLink": "https://github.com/UTN-FRBA-Mobile/Tragui",
-    "projectLink": "https://github.com/UTN-FRBA-Mobile/Tragui",
+    "projectLink": "",
     "imagePath": "../images/tragui.png"
 },
 {
@@ -12,7 +12,7 @@
     "description": "A Kotlin-based Android application that centralizes promotions by collecting offers from banks. Developed using Kotlin, this app allows users to track, filter, and stay up-to-date on personalized promotions all in one place.",
     "technologies": ["Kotlin", "Android Studio", "Git", "Firebase Database", "MVC Architecture", "Python", "Selenium"],
     "githubLink": "https://github.com/FranciscoAnnoni/offerHub",
-    "projectLink": "https://github.com/FranciscoAnnoni/offerHub",
+    "projectLink": "",
     "imagePath": "../images/offerhub.png"
 },
 {

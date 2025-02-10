@@ -138,6 +138,8 @@ export const TabSection = () => {
 
 //----------------------------------------------------------------------------// Proyectos
 export const ProjectCard = ({ title, description, technologies, githubLink, projectLink }) => {
+  const link = projectLink && projectLink.trim() !== "" ? projectLink : githubLink;
+
   return (
       <li className="projects__StyledProject-sc-1v1fime-1 gJHaRi">
           <div className="project-inner">
@@ -150,13 +152,15 @@ export const ProjectCard = ({ title, description, technologies, githubLink, proj
                         <a href={githubLink} aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                           <FaGithub/>
                         </a>
-                        <a href={projectLink} aria-label="External Link" className="external" target="_blank" rel="noopener noreferrer">
-                          <FiExternalLink/>
-                        </a>
+                        {projectLink && projectLink.trim() !== "" && (
+                          <a href={projectLink} aria-label="External Link" className="external" target="_blank" rel="noopener noreferrer">
+                            <FiExternalLink />
+                          </a>
+                        )}
                       </div>
                   </div>
                   <h3 className="project-title">
-                      <a href={projectLink} target="_blank" rel="noopener noreferrer">{title}</a>
+                      <a href={link} target="_blank" rel="noopener noreferrer">{title}</a>
                   </h3>
                   <div className="project-description">
                       <p>{description}</p>
@@ -176,19 +180,21 @@ export const ProjectCard = ({ title, description, technologies, githubLink, proj
 
 
 export const FeaturedProjectCard = ({ title, description, technologies, githubLink, projectLink, imagePath }) => {
+  const link = projectLink && projectLink.trim() !== "" ? projectLink : githubLink;
+
   return (
     <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4">
       <div className="project-content">
         <div className="project-text">
           <p className="project-overline">Featured Project</p>
           <h3 className="project-title-work">
-            <a href={projectLink} rel="noopener noreferrer" target="_blank">{title}</a>
+            <a href={link} rel="noopener noreferrer" target="_blank">{title}</a>
           </h3>
           <div className="project-description">
             <p>{description}</p>
           </div>
         </div>
-          <a href={projectLink} rel="noopener noreferrer" target="_blank" className="project-image-phone">
+          <a href={link} rel="noopener noreferrer" target="_blank" className="project-image-phone">
       <div className="project-image-phone-div">
           <div>
             <img decoding="async" src={imagePath} alt={title} className="main-image" />
@@ -206,16 +212,17 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
           <a href={githubLink} aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
             <FaGithub />
           </a>
-          <a href={projectLink} aria-label="External Link" className="external" rel="noopener noreferrer" target="_blank">
-            <FiExternalLink />
-          </a>
+          {projectLink && projectLink.trim() !== "" && (
+                          <a href={projectLink} aria-label="External Link" className="external" target="_blank" rel="noopener noreferrer">
+                            <FiExternalLink />
+                          </a>
+          )}
         </div>
       </div>
-      <a href={projectLink} rel="noopener noreferrer" target="_blank" className="project-image-link">
+      <a href={link} rel="noopener noreferrer" target="_blank" className="project-image-link">
       <div className="project-image">
           <div>
             <img decoding="async" src={imagePath} alt={title} className="main-image" />
-            
           </div>
         
       </div>

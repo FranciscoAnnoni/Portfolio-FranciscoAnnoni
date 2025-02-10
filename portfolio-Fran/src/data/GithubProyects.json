@@ -4,7 +4,7 @@
         "description": "A real-time chat application with Node.js and WebSockets using Socket.IO for communication. It features message persistence via SQLite, allowing users to interact in real-time.",
         "technologies": ["Node.js", "HTML", "Socket.IO", "SQLite", "@libsql/client"],
         "githubLink": "https://github.com/FranciscoAnnoni/LiveChat",
-        "projectLink": "https://github.com/FranciscoAnnoni/LiveChat"
+        "projectLink": ""
     }
     ,
     {
@@ -19,13 +19,13 @@
         "description": "A machine learning project utilizing Convolutional Neural Networks (CNN) to recognize Korean Hangul characters from images.",
         "technologies": ["TensorFlow", "OpenCV", "Matplotlib", "NumPy"],
         "githubLink": "https://github.com/FranciscoAnnoni/IA",
-        "projectLink": "https://github.com/FranciscoAnnoni/IA"
+        "projectLink": ""
     },
     {
         "title": "Automatic MongoDB Replica Set Setup with Shell Script",
         "description": "A shell script designed to automatically configure a MongoDB replica set across three nodes. This script sets up the configuration, connects the nodes, and ensures proper synchronization of the replica set members.",
         "technologies": ["Shell Script", "MongoDB","Linux"],
         "githubLink": "https://github.com/FranciscoAnnoni/MongoDB",
-        "projectLink": "https://github.com/FranciscoAnnoni/MongoDB"
+        "projectLink": ""
     }
 ]
