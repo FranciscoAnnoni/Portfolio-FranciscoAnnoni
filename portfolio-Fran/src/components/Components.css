@@ -1,63 +1,53 @@
-
-/*Follow Mouse*/
-
-  .cursor-dot {
-    pointer-events: none;
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: var(--foreground-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: opacity 0.2s ease, transform 0.1s ease;
-  }
-
-  
-  /*light and Dack*/
-  .minimal-toggle-button {
-    display: flex;
-    align-items: center;
-    padding-top: 1px;
-    padding-left: 20px;
-    cursor: pointer;
-    font-size: 1rem; /* Tamaño del icono */
-    color: var(--foreground-color); /* Color base del icono */
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-
-  .minimal-toggle-button:hover {
-    transform: scale(1.1); /* Pequeño efecto de zoom */
-    color: var(--icon-hover-color, #d35400); /* Color del icono al hacer hover */
-  }
-  
-  .icon {
-    transition: transform 0.3s ease, color 0.3s ease; /* Transiciones suaves */
-  }
-  .iconMoon{
-    color: var(--primary-text-color);
-    font-size: 13px; /* Tamaño del icono */
-  }
-  .iconSun{
-    color: var(--foreground-color);
-    font-size: 18px; /* Tamaño del icono */
-  }
-  .iconSun:hover{
-    color: var(--primary-text-color);
-  }
-  
-/*Buton color*/
-:root {
-  --padding: 1rem 4rem;
-  --step: 0.13rem;
+/* Estilos del cursor personalizado */
+.cursor-dot {
+  pointer-events: none;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--foreground-color);
+  border-radius: 50%;
+  z-index: 9999;
+  transition: opacity 0.2s ease, transform 0.1s ease;
 }
 
-button:is(:hover, :focus-visible) {
-  --active: 1;
+/* Toggle de modo claro/oscuro */
+.minimal-toggle-button {
+  display: flex;
+  align-items: center;
+  padding: 1px 0 0 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--foreground-color);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.minimal-toggle-button:hover {
+  transform: scale(1.1);
+  color: var(--icon-hover-color, #d35400);
+}
+
+.iconMoon {
+  color: var(--primary-text-color);
+  font-size: 13px;
+}
+
+.iconSun {
+  color: var(--foreground-color);
+  font-size: 18px;
+}
+
+.iconSun:hover {
+  color: var(--primary-text-color);
+}
+
+/* Estilos de botones */
+:root {
+  --btn-padding: 1rem 4rem;
+  --btn-step: 0.13rem;
 }
 
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--primary-family);
   border: 0;
   --active: 0;
   color: var(--foreground-color);
@@ -68,22 +58,9 @@ button {
   padding: 0;
 }
 
-button span:first-of-type {
-  padding: 20px 0px 0px 20px;
-}
-
-button span:not(:first-of-type) {
-  position: absolute;
-}
-
-[aria-hidden] {
-  color: transparent;
-}
-
 button span {
   font-size: 15px;
   font-weight: 600;
-  font-family: var(--primary-family);
   inset: 0;
   display: grid;
   background: var(--bg);
@@ -91,8 +68,16 @@ button span {
   transition: 0.25s ease;
   border: 2px solid var(--foreground-color);
   border-radius: 4px;
-  translate: calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1))
-    calc((var(--active) * var(--coefficient, 0)) * (var(--step) * -1));
+  translate: calc((var(--active) * var(--coefficient, 0)) * (var(--btn-step) * -1))
+    calc((var(--active) * var(--coefficient, 0)) * (var(--btn-step) * -1));
+}
+
+button span:first-of-type {
+  padding: 20px 0px 0px 20px;
+}
+
+button span:not(:first-of-type) {
+  position: absolute;
 }
 
 span:nth-of-type(1) {
@@ -104,104 +89,125 @@ span:nth-of-type(3) {
   --bg: var(--background-color);
 }
 
+button:is(:hover, :focus-visible) {
+  --active: 1;
+}
+
 button:active {
   --active: 0.43;
 }
 
-/*----------------------------------*/
-/* App container styles */
+[aria-hidden] {
+  color: transparent;
+}
+
+/* Sección de tabs (pestañas) */
 .app-container {
   display: flex;
   margin: 0;
   padding: 0;
   overflow: hidden;
-height: 450px;
+  height: 400px;
 }
 
-/* Maintain tab width */
-.tabs-container .tab-button {
-  font-family: var(--thirt-family);
-
+/* Estilos para las pestañas con logos */
+.tab-with-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
 }
 
-/* Tabs (left menu) */
+.company-logo {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--secondary-text-color);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.company-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.company-logo-img.active {
+  opacity: 1;
+}
+
+.tab-with-logo:hover .company-logo {
+  border-color: var(--foreground-color);
+  transform: scale(1.05);
+}
+
 .tabs-container {
   width: 20%;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow-x: hidden; /* Habilita barra de desplazamiento horizontal */
-  max-width: 100%; /* Asegura que no se exceda del ancho del contenedor */
+  overflow-x: hidden;
+  max-width: 100%;
   box-sizing: border-box;
-
 }
 
-
-
-/* Tab Button Styling */
 .tab-button {
-  color:var(--secondary-text-color);
+  font-family: var(--thirt-family);
+  color: var(--secondary-text-color);
   padding: 10px 15px;
   border: none;
   background: none;
-  text-align: center; /* Centrar el texto */
+  text-align: center;
   cursor: pointer;
   font-size: 18px;
   position: relative;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
-  width: 110%;
-  
+  width: 120%;
 }
 
 .tab-button.active {
   font-weight: bold;
-  color: var(--foreground-color)
+  color: var(--foreground-color);
 }
 
-/* Hover Effect */
 .tab-button:hover {
   font-weight: bold;
-  background-color:rgba(255, 192, 203, 0.217); /* Rosa claro con 30% de opacidad */ ;
+  background-color: rgba(255, 192, 203, 0.217);
 }
 
-/* Vertical Highlight Line */
+/* Línea vertical para las pestañas */
 .tab-button::before {
   content: "";
   position: absolute;
-  left: 0; /* Coloca la línea al borde izquierdo */
+  left: 0;
   top: 0;
   bottom: 0;
-  width: 3px; /* Ancho de la línea vertical */
-  background-color: transparent; /* Línea invisible por defecto */
+  width: 3px;
+  background-color: rgba(125, 125, 125, 0.381);
   transition: background-color 0.3s ease;
 }
 
-/* Active Tab Line (Vertical) */
 .tab-button.active::before {
-  background-color: var(--foreground-color); /* Color para la pestaña activa */
+  background-color: var(--foreground-color);
 }
 
-/* Hover Effect for Line */
-.tab-button:hover::before {
-  /*background-color: rgba(255, 165, 0, 0.7);  Color al pasar el mouse */ 
-}
-
-.tab-button::before {
-  background-color: rgba(125, 125, 125, 0.381); /* Color al pasar el mouse */ 
-}
-
-/* Content (right section) */
+/* Contenedor de contenido */
 .content-container {
   max-width: 68%;
-  height: 110%;
+  height: 100%;
   padding: 0px 10px 10px 30px;
-  overflow-y: auto;
   font-family: var(--small-family);
 }
 
-/* Panel Content */
 .panel {
   display: none;
 }
@@ -210,21 +216,23 @@ height: 450px;
   display: block;
 }
 
+/* Estilos de texto */
 .titulo {
   font-size: 1.8rem;
-  color: var( --thirty-text-color);
+  color: var(--thirty-text-color);
   font-weight: 500;
   font-family: var(--primary-family);
   margin-bottom: 10px;
 }
 
-.subtitulo{
+.subtitulo {
   font-family: var(--thirt-family);
   color: var(--secondary-text-color);
   font-size: 18px;
   padding-bottom: 6px;
 }
-.texto{
+
+.texto {
   font-size: 18px;
   font-family: var(--small-family);
   color: var(--secondary-text-color);
@@ -232,48 +240,47 @@ height: 450px;
   padding-left: 30px;
   margin-bottom: 10px;
 }
-/* Estilo general para la lista */
+
+/* Estilos para listas personalizadas */
 .custom-list {
-  list-style-type: none; /* Elimina el marcador nativo */
+  list-style-type: none;
   padding: 0;
   margin: 0;
-  position: relative; /* Necesario para posicionar ::before de los li */
+  position: relative;
 }
 
-/* Aplica el estilo al before de los li */
 .custom-list-item {
-  position: relative; /* Necesario para posicionar el ::before */
-  padding-left: 20px; /* Espacio reservado para el símbolo */
+  position: relative;
+  padding-left: 20px;
 }
 
 .custom-list-item::before {
-  content: "-"; /* Símbolo que reemplaza el marcador */
+  content: "-";
   position: absolute;
-  left: 0; /* Coloca el símbolo al inicio */
-  color: var(--foreground-color); /* Color personalizado */
-  font-size: 1.2em; /* Tamaño opcional para el símbolo */
-  font-family: Arial, sans-serif; /* Opcional, asegura que el símbolo sea uniforme */
+  left: 0;
+  color: var(--foreground-color);
+  font-size: 1.2em;
 }
 
-/* Card Work Stile */
-/*----------------------------------*/
-
+/* Estilos de tarjetas de proyecto */
+/* Tarjetas estándar */
 .projects__StyledProject-sc-1v1fime-1 {
   background-color: var(--background-color-card);
   transition: var(--transition);
   border-radius: 12px;
-  &:hover,
-  &:focus {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      transform: translateY(-5px);
-      color: var(--foreground-color);
-  }
-  
-  &:hover .project-title a,
-  &:focus .project-title a {
-    transition: var(--transition);
-      color: var(--foreground-color); /* Cambia el color del título */
-  }
+  display: flex;
+  height: 100%;
+}
+
+.projects__StyledProject-sc-1v1fime-1:hover,
+.projects__StyledProject-sc-1v1fime-1:focus {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.projects__StyledProject-sc-1v1fime-1:hover .project-title a,
+.projects__StyledProject-sc-1v1fime-1:focus .project-title a {
+  color: var(--foreground-color);
 }
 
 .project-inner {
@@ -281,79 +288,75 @@ height: 450px;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  border-radius: var(--border-radius);
-  background-color: var(--light-navy);
-  box-shadow: 0 10px 30px -15px var(--navy-shadow);
-  transition: var(--transition);
+  border-radius: 10px;
+  background-color: var(--background-color-card);
+  box-shadow: 0 10px 30px -15px var(--sombra);
+  width: 100%;
+  height: 100%;
 }
 
 .project-top {
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
   align-items: center;
   margin-bottom: 35px;
 }
 
-
 .folder {
   color: var(--foreground-color);
   font-size: 40px;
-  
 }
 
-
-.project-title a{
+/* Enlaces de proyecto */
+.project-title a {
   text-decoration: none;
   margin: 0 0 10px;
-  color:var(--thirty-text-color);
+  color: var(--thirty-text-color);
   font-family: var(--second-family);
   font-size: 20px;
+  transition: var(--transition);
+}
+
+.project-links a {
+  color: var(--secondary-text-color);
+  font-size: 25px;
+  margin-left: 10px;
+  transition: var(--transition);
 }
 
 .project-links {
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  a {
-      color: var(--secondary-text-color);
-      font-size: 25px;
-      margin-left: 10px;
-      margin-right: 5px;
-      transition: var(--transition);
-      &:hover {
-          color: var(--foreground-color);
-      }
-  }
 }
 
+.project-links a:hover {
+  color: var(--foreground-color);
+}
+
+/* Descripción y tecnologías */
 .project-description {
   color: var(--secondary-text-color);
   font-family: var(--primary-family);
   font-weight: 350;
   margin-top: 10px;
-
 }
 
 .project-tech-list {
-  color:var(--thirty-text-color);
+  color: var(--thirty-text-color);
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  bottom: 0;
-  li {
-      font-family: var(--thirt-family);
-      font-size: 10px;
-      margin-top: 15px;
-      margin-right: 15px;
-  }
 }
 
-/* Featured Project */
-/*----------------------------------*/
+.project-tech-list li {
+  font-family: var(--thirt-family);
+  font-size: 10px;
+  margin: 15px 15px 0 0;
+}
+
+/* Proyectos destacados */
 .featured__StyledProject-ywnbqt-1 {
   position: relative;
   display: flex;
@@ -365,23 +368,21 @@ height: 450px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin-bottom: 20px;
-  background-color:rgba(255, 255, 255, 0.091);
+  background-color: rgba(255, 255, 255, 0.091);
 }
 
 .featured__StyledProject-ywnbqt-1:hover,
 .featured__StyledProject-ywnbqt-1:focus {
   transform: translate(3px, -2px);
-  box-shadow:  8px 6px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 6px -2px rgba(0, 0, 0, 0.3);
 }
 
-/* Project Content */
 .project-content {
   flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 650px;
-  
 }
 
 .project-title-work a {
@@ -392,45 +393,31 @@ height: 450px;
   font-size: 30px;
 }
 
-.project-description {
-  background-color: var(--description-background-color);
-  color: var(--secondary-text-color);
-  font-family: var(--primary-family);
-  font-weight: 350;
-  margin-top: 10px;
-}
-
 .project-tech-list-featured {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 10px 0 0;
-  color:var(--thirty-text-color);
-
-  li {
-      font-family: var(--thirt-family);
-      font-size: 13px;
-      margin-top: 15px;
-      margin-right: 15px;
-      margin-left: 3px;
-  }
-
+  color: var(--thirty-text-color);
 }
 
-/* Project Links */
+.project-tech-list-featured li {
+  font-family: var(--thirt-family);
+  font-size: 13px;
+  margin: 15px 15px 0 3px;
+}
+
 .project-links-feature {
   display: flex;
   align-items: center;
-  margin-top: auto;
   margin-top: 20px;
 }
 
 .project-links-feature a {
   color: var(--secondary-text-color);
   font-size: 25px;
-  margin-left: 10px;
-  margin-right: 5px;
+  margin: 0 5px 0 10px;
   transition: var(--transition);
 }
 
@@ -438,7 +425,7 @@ height: 450px;
   color: var(--foreground-color);
 }
 
-.project-overline{
+.project-overline {
   font-family: var(--thirt-family);
   color: var(--foreground-color);
   font-size: 16px;
@@ -446,7 +433,7 @@ height: 450px;
   margin-bottom: 12px;
 }
 
-/* Project Image */
+/* Imagen del proyecto */
 .project-image {
   position: relative;
   max-width: 100%;
@@ -455,13 +442,7 @@ height: 450px;
   justify-content: flex-end;
   align-items: center;
 }
-.featured__StyledProject-ywnbqt-1:hover .project-image::before,
-.project-image:hover::before {
-  opacity: 0; /* Desaparece al hacer hover sobre el componente o la imagen */
-}
-.project-image-phone{
-  display: none;
-}
+
 .project-image::before {
   content: '';
   position: absolute;
@@ -469,13 +450,18 @@ height: 450px;
   left: 0;
   width: 100%;
   height: 98.67%;
-  background-color: rgba(255, 128, 0, 0.212); /* Color naranja con opacidad */
+  background-color: rgba(255, 128, 0, 0.212);
   transition: opacity var(--transition);
   border-radius: 5px;
 }
 
+.featured__StyledProject-ywnbqt-1:hover .project-image::before,
 .project-image:hover::before {
-  opacity: 0; /* Desaparece al hacer hover */
+  opacity: 0;
+}
+
+.project-image-phone {
+  display: none;
 }
 
 .main-image {
@@ -484,121 +470,128 @@ height: 450px;
   height: auto;
   border-radius: 5px;
   object-fit: cover;
-  z-index: 1; /* Asegura que la imagen esté por encima de la superposición */
+  z-index: 1;
 }
 
+/* Media queries */
 @media (min-width: 1080px) {
   .main-image {
     width: auto;
   }
-  .project-links-feature{
+  
+  .project-links-feature {
     margin-top: 90px;
   }
 }
 
-
-
-
 @media (max-width: 780px) {
-  .tab-button{
+  /* Estilos de pestañas responsivos */
+  .tab-button {
     font-size: 15px;
   }
-  .titulo{
+  
+  .titulo {
     font-size: 1.4rem;
   }
-  .subtitulo{
+  
+  .subtitulo {
     font-size: 15px;
   }
-  .texto{
+  
+  .texto {
     font-size: 14px;
   }
+  
   .app-container {
     display: inline;
     overflow: hidden;
-}
-
+  }
+  
   .tabs-container {
     width: 100%;
     flex-direction: row;
   }
-  .content-container{
+  
+  .content-container {
     max-width: 100%;
     width: 100%;
     margin-top: 15px;
   }
-
-
+  
+  /* Proyectos responsivos */
   .project-description {
     max-width: 450px;
-}
-
+  }
+  
   .project-image-link {
     display: none;
   }
-  .project-text{
+  
+  .project-text {
     padding-left: 20px;
   }
   
   .project-image-phone {
     margin-top: 30px;
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    justify-content: center;
     height: auto;
     width: 100%;
     text-align: center;
-}
-.project-tech-list-featured {
-  align-items: center; /* Centra los elementos horizontalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
-  list-style: none; /* Elimina los puntos de lista */
-  padding: 0; /* Elimina el padding predeterminado de la lista */
-  margin: 0 auto; /* Asegura el centrado del ul dentro de su contenedor */
-  text-align: center; /* Centra el texto dentro de cada li */
+  }
+  
+  .project-tech-list-featured {
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
-
-}
-
-@media (max-width: 600px){
-  .project-text{
-    padding-left: 0px;
+@media (max-width: 600px) {
+  .project-text {
+    padding-left: 0;
   }
-  .project-text p{
-    font-size: 14px;
-  }
-  .project-title-work a{
-    font-size: 26px;
-  }
+  
+  .project-text p,
   .project-description p {
     font-size: 14px;
   }
-}
-
-@media(max-width: 500px){
-  .project-links-feature {
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
+  
+  .project-title-work a {
+    font-size: 26px;
   }
 }
+
+@media (max-width: 500px) {
+  .project-links-feature {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 360px) {
   .tabs-container {
     text-align: center;
-    overflow-x: auto; /* Habilita barra de desplazamiento horizontal */
-    max-width: 90%; /* Asegura que no se exceda del ancho del contenedor */
+    overflow-x: auto;
+    max-width: 90%;
     box-sizing: border-box;
-}
-.tab-button {
-  width: 70%;
-}
-.tabs-container button {
-    white-space: nowrap; /* Evita que el texto de los botones haga un salto de línea */
-    flex-shrink: 0; /* Evita que los botones se reduzcan */
-}
-
-.app-container {
-  display: inline;
-  overflow: hidden;
-}
-
+  }
+  
+  .tab-button {
+    width: 70%;
+  }
+  
+  .tabs-container button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .app-container {
+    display: inline;
+    overflow: hidden;
+  }
 }

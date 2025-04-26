@@ -1,115 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-*{
+
+/* Reset básico y estilos globales */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
-html,
-body {
+html, body {
   height: 100%;
   margin: 0;
-  scroll-behavior: smooth; /* Hace que el scroll sea suave */
-  overflow-x: hidden; /* Evita el overflow horizontal */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Personalización de la barra de desplazamiento */
-::-webkit-scrollbar {
-  width: 16px; /* Ancho de la barra de desplazamiento */
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-color); /* Color de fondo de la pista de desplazamiento */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--secondary-text-color); /* Color de la barra de desplazamiento */
-  border-radius: 10px; /* Bordes redondeados de la barra de desplazamiento */
-  border: 3px solid var(--background-color); /* Espacio alrededor de la barra de desplazamiento */
-  transition: background-color 0.3s ease; /* Transición para el efecto de hover */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--foreground-color); /* Color de la barra de desplazamiento al hacer hover */
-}
-
-
-
-
-
-
-/* Variables de temas (se aplican automáticamente a nivel root) */
-[data-theme="light"] {
-  --white: #ffffff;
-  --background-color: var(--blanco-crema);
-  --primary-text-color: var(--azul-oscuro);
-  --foreground-color:var(--naranja-claro);
-  --secondary-text-color: var(--gris-oscuro);
-  --sombra:var(--sombra-light);
-  --thirty-text-color:var(--gris-oscuro);
-  --background-color-card: var(--blanco-crema-oscuro);
-  --navbar-menu-color: var(--blanco-crema-oscuro);
-}
-
-[data-theme="dark"] {
-  --background-color: var(--azul-oscuro);
-  --primary-text-color: var(--blanco-crema);
-  --foreground-color: var(--naranja);
-  --secondary-text-color: var(--gris);
-  --thirty-text-color:var(--blanco-gris);
-  --sombra: var(--sombra-dark);
-  --background-color-card: var(--azul-oscuro-claro);
-  --navbar-menu-color: var(--azul-oscuro-claro);
-}
-
+/* Variables temáticas */
 :root {
-
+  /* Colores base */
   --blanco-crema-oscuro: #ebe1c9;
   --blanco-crema: #f8eddc;
   --blanco-gris: #ccd6f6;
 
   --gris: #a8afc4;
-  --gris-oscuro:#495670;
+  --gris-oscuro: #495670;
 
-  --azul-oscuro-claro:#283853;
-  --azul-oscuro:#0b192b;
-
+  --azul-oscuro-claro: #283853;
+  --azul-oscuro: #0b192b;
 
   --naranja-claro: #ed892f;
   --naranja: #ff6347;
 
+  /* Sombras */
   --sombra-light: rgba(0, 0, 0, 0.24);
   --sombra-dark: rgba(0, 0, 0, 0.84);
 
-
-
+  /* Fuentes */
   --primary-family: "Inter", serif;
   --second-family: 'Mc Saatchi', sans-serif;
   --thirt-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   --small-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 
+  /* Tamaños de fuente */
   --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
 
-    --transition: 300ms;
+  /* Transiciones */
+  --transition: 300ms;
 }
 
+/* Temas - Claro */
+[data-theme="light"] {
+  --background-color: var(--blanco-crema);
+  --primary-text-color: var(--azul-oscuro);
+  --foreground-color: var(--naranja-claro);
+  --secondary-text-color: var(--gris-oscuro);
+  --sombra: var(--sombra-light);
+  --thirty-text-color: var(--gris-oscuro);
+  --background-color-card: var(--blanco-crema-oscuro);
+  --navbar-menu-color: var(--blanco-crema-oscuro);
+}
+
+/* Temas - Oscuro */
+[data-theme="dark"] {
+  --background-color: var(--azul-oscuro);
+  --primary-text-color: var(--blanco-crema);
+  --foreground-color: var(--naranja);
+  --secondary-text-color: var(--gris);
+  --thirty-text-color: var(--blanco-gris);
+  --sombra: var(--sombra-dark);
+  --background-color-card: var(--azul-oscuro-claro);
+  --navbar-menu-color: var(--azul-oscuro-claro);
+}
+
+/* Estilos de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-text-color);
+  border-radius: 10px;
+  border: 3px solid var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--foreground-color);
+}
+
+/* Estilos globales del cuerpo */
 body {
-  background-color: var(--background-color); /* Usamos la variable */
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
   counter-reset: section;
 }
 
-.pt-5{
-  padding-top: 5px;
-}
-.pt-8{
-  padding-top: 8px;
-}
+/* Utilidades comunes */
+.pt-5 { padding-top: 5px; }
+.pt-8 { padding-top: 8px; }

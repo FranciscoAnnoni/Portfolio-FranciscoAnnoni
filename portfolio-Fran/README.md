@@ -4,9 +4,6 @@ Welcome to my portfolio repository! 🚀 This project showcases my work, experie
 
 📸 Screenshots
 
-
-
-
 🛠 Technologies Used
 
 This project was built using the following technologies:

@@ -4,6 +4,7 @@
     "label": "Data Architect",
     "title": "Data Architect - DBlandIT",
     "date": "Dec 2021 - Aug 2024",
+    "logoUrl": "/images/dblandit-logo.png",
     "content": [
       "Implemented custom Bash scripting for log optimization and analysis, using Logrotate and Logstash to streamline data management and ensure system efficiency.",
       "Designed and maintained MongoDB databases, configured ReplicaSets, and optimized database performance to meet the growing needs of the company.",
@@ -16,6 +17,7 @@
     "label": "Researcher",
     "title": "Research and Development Intern - UTN",
     "date": "Apr 2020 - Dec 2021",
+    "logoUrl": "/images/utn-logo.png",
     "content": [
       "I collaborated with the teaching team at UDB Chemistry to develop a platform for administering exams and storing responses during the pandemic.",
       "The platform was built using Google Suite and Google's set of tools, managing channels and sequences to configure a spreadsheet for recording students' grades, which was later used for analysis and conclusions."
@@ -26,6 +28,7 @@
     "label": "Internship",
     "title": "Web Page Design - Internship at High School",
     "date": "Spring 2017 & 2018",
+    "logoUrl": "/images/school-logo.png",
     "content": [
       "Assisted in the creation of the student record page for the school, helping design and implement a platform for managing student data.",
       "Collaborated on the development of a basic webpage to showcase upcoming school events, providing an easy-to-use interface for students and teachers."
