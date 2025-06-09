@@ -360,6 +360,116 @@ section {
   }
 }
 
+@media (max-width: 393px) {
+  /* iPhone 14 optimization */
+  
+  /* Section spacing optimization */
+  section {
+    margin: 0 5%;
+    padding: 60px 0px;
+  }
+  
+  /* Introduction section */
+  .introduction {
+    height: 80vh;
+    padding: 0px;
+  }
+  
+  .Small-text {
+    font-size: 11px;
+  }
+  
+  .Introduction-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+  
+  .Introduction-subtitle {
+    font-size: 2.3rem;
+    line-height: 1.1;
+  }
+  
+  .Introduction-p {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 90%;
+  }
+  
+  /* General text sizing */
+  .title-section {
+    font-size: 1.6rem;
+  }
+  
+  .text-section {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  /* About section */
+  .bNXWUU .inner p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .skills-list span {
+    font-size: 13px;
+  }
+  
+  .kNIdQM ul.skills-list {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 5px 8px;
+  }
+  
+  /* Contact section */
+  .contact {
+    max-width: 90%;
+    margin: 0px auto 60px;
+  }
+  
+  .contact-content p {
+    max-width: 95%;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .button-contact-personal span {
+    width: 180px;
+    height: 50px;
+    font-size: 14px;
+  }
+  
+  /* Projects section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 30px 0 0;
+  }
+  
+  .title-2 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+  
+  .inline-link {
+    font-size: 14px;
+  }
+  
+  /* Numbered headings */
+  .numbered-heading {
+    margin: 10px 0px 25px;
+    font-size: clamp(20px, 4vw, var(--fz-heading));
+  }
+  
+  .numbered-heading::before {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  
+  .numbered-heading::after {
+    width: 200px;
+    margin-left: 15px;
+  }
+}
+
 @media (max-width: 600px) {
   .tabs-container {
     display: flex;

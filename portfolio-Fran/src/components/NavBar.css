@@ -283,6 +283,51 @@ opacity: 0; /* Invisibilidad inicial para un efecto más limpio */
     transition: filter 0.3s ease; /* Smooth transition */
 }
 
+@media (max-width: 393px) {
+  /* iPhone 14 optimization - Menu text reduction */
+  
+  .navbar-menu {
+    width: 220px;
+    right: -220px;
+  }
+  
+  .navbar-menu ol a {
+    font-size: 20px; /* Reduced from 25px */
+    padding: 2px 15px 15px; /* Reduced padding */
+  }
+  
+  .navbar-menu ol li {
+    margin: 0 auto 15px; /* Reduced margin */
+  }
+  
+  .navbar-menu ol li::before {
+    font-size: 12px; /* Reduced counter size */
+    margin-right: 8px;
+  }
+  
+  .content-menu {
+    margin-top: 35px;
+  }
+  
+  .button-menu-phone button span {
+    width: 160px; /* Reduced button width */
+    height: 45px; /* Reduced button height */
+    font-size: 14px; /* Reduced button text */
+  }
+  
+  .darkLight-icon-mobile {
+    margin-right: 25px;
+  }
+  
+  .navbar-menu-icon {
+    margin-right: 20px;
+  }
+  
+  .logo {
+    margin-left: 15px;
+  }
+}
+
 @media (max-width: 950px) {
     .navbar-right {
         display: none;

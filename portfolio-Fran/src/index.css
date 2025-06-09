@@ -108,3 +108,27 @@ body {
 /* Utilidades comunes */
 .pt-5 { padding-top: 5px; }
 .pt-8 { padding-top: 8px; }
+
+/* iPhone 14 and mobile optimization */
+@media (max-width: 393px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-size: 14px; /* Base font size adjustment */
+  }
+  
+  /* Smaller padding for mobile */
+  .pt-5 { padding-top: 3px; }
+  .pt-8 { padding-top: 5px; }
+  
+  /* Scrollbar optimization for mobile */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid var(--background-color);
+  }
+}

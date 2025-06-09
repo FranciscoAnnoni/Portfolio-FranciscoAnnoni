@@ -68,3 +68,35 @@ a{
   font-family: var(--thirt-family);
   color:var(--secondary-text-color);
 }
+
+/* iPhone 14 optimization */
+@media (max-width: 393px) {
+  .footer {
+    padding: 15px;
+  }
+  
+  .francisco {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  
+  .footer p {
+    font-size: 12px;
+    padding-top: 3px;
+  }
+  
+  .social-icons p {
+    font-size: 13px;
+  }
+  
+  .social-icons a {
+    font-size: 20px;
+    margin-left: 8px;
+    margin-right: 3px;
+  }
+  
+  .social-icons svg {
+    width: 18px;
+    height: 18px;
+  }
+}

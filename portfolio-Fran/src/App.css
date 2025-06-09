@@ -28,10 +28,22 @@ section {
   transition: filter 0.3s ease; /* Smooth transition */
 }
 
-  /*Media querrys*/
-  @media (max-width: 900px) {
-      .follow-mouse {
-          display: none;
-      }
-
+/* Media queries */
+@media (max-width: 393px) {
+  /* iPhone 14 optimization */
+  section {
+    margin: 0px 5%;
+    padding: 60px 0px;
+    max-width: 95%;
   }
+  
+  .App {
+    padding-top: 70px; /* Adjust for fixed navbar */
+  }
+}
+
+@media (max-width: 900px) {
+  .follow-mouse {
+    display: none;
+  }
+}

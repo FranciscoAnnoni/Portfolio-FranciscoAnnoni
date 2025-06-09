@@ -573,6 +573,84 @@ button:active {
   }
 }
 
+@media (max-width: 393px) {
+  /* iPhone 14 and similar devices optimization */
+  
+  /* Project cards optimization */
+  .project-inner {
+    padding: 15px;
+  }
+  
+  .project-title a {
+    font-size: 18px;
+  }
+  
+  .project-description {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .project-tech-list li {
+    font-size: 9px;
+    margin: 10px 10px 0 0;
+  }
+  
+  .folder {
+    font-size: 35px;
+  }
+  
+  /* Featured projects optimization */
+  .featured__StyledProject-ywnbqt-1 {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .project-title-work a {
+    font-size: 22px;
+  }
+  
+  .project-description p {
+    font-size: 13px;
+  }
+  
+  .project-tech-list-featured li {
+    font-size: 11px;
+    margin: 10px 8px 0 0;
+  }
+  
+  .project-overline {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .main-image {
+    max-width: 280px;
+  }
+  
+  /* Experience tabs optimization */
+  .tab-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .titulo {
+    font-size: 1.2rem;
+  }
+  
+  .subtitulo {
+    font-size: 14px;
+  }
+  
+  .texto {
+    font-size: 13px;
+    padding-left: 20px;
+  }
+  
+  .content-container {
+    padding: 0px 5px 10px 20px;
+  }
+}
+
 @media (max-width: 360px) {
   .tabs-container {
     text-align: center;
@@ -583,6 +661,7 @@ button:active {
   
   .tab-button {
     width: 70%;
+    font-size: 13px;
   }
   
   .tabs-container button {
@@ -593,5 +672,18 @@ button:active {
   .app-container {
     display: inline;
     overflow: hidden;
+  }
+  
+  /* Additional optimizations for very small screens */
+  .project-inner {
+    padding: 12px;
+  }
+  
+  .project-title a {
+    font-size: 16px;
+  }
+  
+  .main-image {
+    max-width: 250px;
   }
 }
