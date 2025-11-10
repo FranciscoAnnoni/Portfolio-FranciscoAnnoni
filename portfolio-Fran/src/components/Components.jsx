@@ -136,19 +136,31 @@ export const TabSection = () => {
   );
 };
 
+//----------------------------------------------------------------------------// Función auxiliar para manejo de clicks en tarjetas de proyectos
+const handleProjectCardClick = (e, githubLink) => {
+  // Si se hace click en un link (iconos) o dentro de un link, no hacer nada
+  // Los links manejarán su propia navegación
+  if (e.target.tagName === 'A' || e.target.closest('a')) {
+    return;
+  }
+  
+  // Si se hace click en cualquier otra parte de la tarjeta, ir a githubLink en nueva pestaña
+  window.open(githubLink, '_blank');
+};
+
 //----------------------------------------------------------------------------// Proyectos
 export const ProjectCard = ({ title, description, technologies, githubLink, projectLink }) => {
   const link = projectLink && projectLink.trim() !== "" ? projectLink : githubLink;
 
   return (
-      <li className="projects__StyledProject-sc-1v1fime-1 gJHaRi">
+      <li className="projects__StyledProject-sc-1v1fime-1 gJHaRi" onClick={(e) => handleProjectCardClick(e, githubLink)} style={{ cursor: 'pointer' }}>
           <div className="project-inner">
               <header>
                   <div className="project-top">
                       <div className="folder">
                       <IoFolderOutline/>
                       </div>
-                      <div className="project-links">
+                      <div className="project-links" style={{ position: 'relative', zIndex: 10 }}>
                         <a href={githubLink} aria-label="GitHub Link" target="_blank" rel="noopener noreferrer">
                           <FaGithub/>
                         </a>
@@ -183,7 +195,7 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
   const link = projectLink && projectLink.trim() !== "" ? projectLink : githubLink;
 
   return (
-    <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4">
+    <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4" onClick={(e) => handleProjectCardClick(e, githubLink)} style={{ cursor: 'pointer' }}>
       <div className="project-content">
         <div className="project-text">
           <p className="project-overline">Featured Project</p>
@@ -208,7 +220,7 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
             ))}
           </ul>
         
-        <div className="project-links-feature">
+        <div className="project-links-feature" style={{ position: 'relative', zIndex: 10 }}>
           <a href={githubLink} aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
             <FaGithub />
           </a>

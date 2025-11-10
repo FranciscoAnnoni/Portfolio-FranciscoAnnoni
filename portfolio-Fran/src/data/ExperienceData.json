@@ -1,6 +1,20 @@
 [
   {
     "id": "panel-0",
+    "label": "Full Stack Developer",
+    "title": "Full Stack - Rappi",
+    "date": "Mar 2025 - Act",
+    "logoUrl": "/images/rappi-logo.png",
+    "content": [
+      "Desarrollador Full Stack enfocado en mejorar el Developer Experience (DevEx) en Rappi, trabajando con Node.js, React y TypeScript para optimizar herramientas internas de desarrollo.",
+      "Implementación de flujos avanzados de Git (feature branches, CI/CD) para asegurar calidad y agilidad en el desarrollo.",
+      "Uso de Docker y AWS para monitorear, desplegar y gestionar microservicios en entornos productivos y de staging.",
+      "Integración de Jira y Slack para la organización de tareas y comunicación efectiva durante cada sprint.",
+      "Colaboración activa con equipos multidisciplinarios."
+    ]
+  },
+  {
+    "id": "panel-1",
     "label": "Data Architect",
     "title": "Data Architect - DBlandIT",
     "date": "Dec 2021 - Aug 2024",
@@ -13,7 +27,7 @@
     ]
   },
   {
-    "id": "panel-1",
+    "id": "panel-2",
     "label": "Researcher",
     "title": "Research and Development Intern - UTN",
     "date": "Apr 2020 - Dec 2021",
@@ -24,7 +38,7 @@
     ]
   },
   {
-    "id": "panel-2",
+    "id": "panel-3",
     "label": "Internship",
     "title": "Web Page Design - Internship at High School",
     "date": "Spring 2017 & 2018",

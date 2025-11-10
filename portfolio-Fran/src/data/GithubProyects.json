@@ -1,18 +1,24 @@
 [
+     {
+        "title": "WriteDreams",
+        "description": "WriteDreams is a minimalistic web app for sharing creative ideas (apps, books, films, etc.) without requiring registration. Users can submit one idea every 24 hours, browse and vote for rated ideas, while unrated ideas remain hidden.",
+        "technologies": ["TypeScript", "JavaScript", "React", "Vite", "Material UI", "local-storage", "HTML", "CSS"],
+        "githubLink": "https://github.com/FranciscoAnnoni/dreamWriteShare",
+        "projectLink": "https://dreamwriteshare.empressaria.com.ar/"
+    },
     {
         "title": "Live-Chat",
         "description": "A real-time chat application with Node.js and WebSockets using Socket.IO for communication. It features message persistence via SQLite, allowing users to interact in real-time.",
         "technologies": ["Node.js", "HTML", "Socket.IO", "SQLite", "@libsql/client"],
         "githubLink": "https://github.com/FranciscoAnnoni/LiveChat",
         "projectLink": ""
-    }
-    ,
+    },
     {
-    "title": "Empressaria",
-    "description": "Empressaria is an e-commerce website designed for efficient product browsing. It loads a product catalog dynamically from a JSON file without requiring a database.",
-    "technologies": ["JavaScript", "ES6 Modules", "HTML", "CSS"],
-    "githubLink": "https://github.com/FranciscoAnnoni/e-comerceReact",
-    "projectLink": "https://www.devannoni.empressaria.com.ar/"
+        "title": "Empressaria",
+        "description": "Empressaria is an e-commerce website designed for efficient product browsing. It loads a product catalog dynamically from a JSON file without requiring a database.",
+        "technologies": ["JavaScript", "ES6 Modules", "HTML", "CSS"],
+        "githubLink": "https://github.com/FranciscoAnnoni/e-comerceReact",
+        "projectLink": "https://www.devannoni.empressaria.com.ar/"
     },
     {
         "title": "Korean Character Recognition with AI",
@@ -22,10 +28,17 @@
         "projectLink": ""
     },
     {
-        "title": "Automatic MongoDB Replica Set Setup with Shell Script",
-        "description": "A shell script designed to automatically configure a MongoDB replica set across three nodes. This script sets up the configuration, connects the nodes, and ensures proper synchronization of the replica set members.",
-        "technologies": ["Shell Script", "MongoDB","Linux"],
-        "githubLink": "https://github.com/FranciscoAnnoni/MongoDB",
+        "title": "Portal Django",
+        "description": "Las bases de un portal interno desarrollado en Django (Python) para la conexión y gestión remota de una base de datos PostgreSQL.",
+        "technologies": ["Python", "Django", "HTML", "CSS", "JavaScript", "PostgreSQL"],
+        "githubLink": "https://github.com/FranciscoAnnoni/portalDjango",
+        "projectLink": ""
+    },
+    {
+        "title": "Django Portal (Foundation)",
+        "description": "The foundation for an internal portal developed in Django (Python) for the remote connection and management of a PostgreSQL database.",
+        "technologies": ["Python", "Django", "HTML", "CSS", "JavaScript", "PostgreSQL"],
+        "githubLink": "https://github.com/FranciscoAnnoni/portalDjango",
         "projectLink": ""
     }
 ]
