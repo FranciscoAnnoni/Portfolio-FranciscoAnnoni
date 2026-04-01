@@ -7,6 +7,7 @@ section {
   margin: 0 10%;
   padding: 100px 0px;
   max-width: 1000px;
+  scroll-margin-top: 80px;
 }
 
 .numbered-heading {
@@ -362,11 +363,12 @@ section {
 
 @media (max-width: 393px) {
   /* iPhone 14 optimization */
-  
+
   /* Section spacing optimization */
   section {
     margin: 0 5%;
     padding: 60px 0px;
+    scroll-margin-top: 70px;
   }
   
   /* Introduction section */
