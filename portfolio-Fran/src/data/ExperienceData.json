@@ -1,21 +1,21 @@
 [
   {
     "id": "panel-0",
-    "label": "Full Stack Developer",
+    "label": "Rappi",
     "title": "Full Stack - Rappi",
     "date": "Mar 2025 - Act",
     "logoUrl": "/images/rappi-logo.png",
     "content": [
-      "Desarrollador Full Stack enfocado en mejorar el Developer Experience (DevEx) en Rappi, trabajando con Node.js, React y TypeScript para optimizar herramientas internas de desarrollo.",
-      "Implementación de flujos avanzados de Git (feature branches, CI/CD) para asegurar calidad y agilidad en el desarrollo.",
-      "Uso de Docker y AWS para monitorear, desplegar y gestionar microservicios en entornos productivos y de staging.",
-      "Integración de Jira y Slack para la organización de tareas y comunicación efectiva durante cada sprint.",
-      "Colaboración activa con equipos multidisciplinarios."
+      "Implementation of internal web apps powered by AI Agents for documentation management and technical support automation, ensuring high performance and reliability.",
+      "Backend/frontend development using Node.js, React, and TypeScript, building and maintaining tools that improve the Developer Experience (DevEx) across engineering teams.",
+      "Design of agentic workflows to automate repetitive processes, integrating LLMs to streamline information retrieval and reduce manual overhead.",
+      "Optimization of CI/CD pipelines and AWS microservices deployments using Docker, Git branching strategies, and infrastructure best practices.",
+      "Active collaboration with multidisciplinary teams using Jira and Slack in agile (Scrum/Kanban) environments."
     ]
   },
   {
     "id": "panel-1",
-    "label": "Data Architect",
+    "label": "DBlandIT",
     "title": "Data Architect - DBlandIT",
     "date": "Dec 2021 - Aug 2024",
     "logoUrl": "/images/dblandit-logo.png",
@@ -28,7 +28,7 @@
   },
   {
     "id": "panel-2",
-    "label": "Researcher",
+    "label": "UTN",
     "title": "Research and Development Intern - UTN",
     "date": "Apr 2020 - Dec 2021",
     "logoUrl": "/images/utn-logo.png",

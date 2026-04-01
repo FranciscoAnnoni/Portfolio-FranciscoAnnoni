@@ -106,8 +106,8 @@ button:active {
   display: flex;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   height: 400px;
+  overflow: hidden;
 }
 
 /* Estilos para las pestañas con logos */
@@ -205,6 +205,9 @@ button:active {
   height: 100%;
   padding: 0px 10px 10px 30px;
   font-family: var(--small-family);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--foreground-color) transparent;
 }
 
 .panel {
@@ -502,19 +505,51 @@ button:active {
   }
   
   .app-container {
-    display: inline;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
-  
+
   .tabs-container {
     width: 100%;
     flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  
+
+  .tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-button {
+    width: auto;
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
   .content-container {
     max-width: 100%;
     width: 100%;
-    margin-top: 15px;
+    height: auto;
+    overflow-y: visible;
+    margin-top: 10px;
+    padding: 0px 5px 10px 15px;
+  }
+
+  .titulo {
+    font-size: 1.1rem;
+  }
+
+  .subtitulo {
+    font-size: 13px;
+  }
+
+  .texto {
+    font-size: 13px;
   }
   
   /* Proyectos responsivos */
@@ -652,25 +687,27 @@ button:active {
 
 @media (max-width: 360px) {
   .tabs-container {
-    text-align: center;
     overflow-x: auto;
-    max-width: 90%;
+    max-width: 100%;
     box-sizing: border-box;
   }
-  
-  .tab-button {
-    width: 70%;
-    font-size: 13px;
-  }
-  
+
   .tabs-container button {
     white-space: nowrap;
     flex-shrink: 0;
   }
-  
+
+  .tab-button {
+    width: auto;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
   .app-container {
-    display: inline;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
   }
   
   /* Additional optimizations for very small screens */

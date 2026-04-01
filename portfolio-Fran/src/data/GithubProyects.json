@@ -28,15 +28,15 @@
         "projectLink": ""
     },
     {
-        "title": "Portal Django",
-        "description": "Las bases de un portal interno desarrollado en Django (Python) para la conexión y gestión remota de una base de datos PostgreSQL.",
-        "technologies": ["Python", "Django", "HTML", "CSS", "JavaScript", "PostgreSQL"],
-        "githubLink": "https://github.com/FranciscoAnnoni/portalDjango",
+        "title": "MCP Server-Client",
+        "description": "A Model Context Protocol (MCP) server-client architecture in Python designed to centralize and dynamically retrieve microservices documentation, enabling AI agents to access up-to-date internal knowledge.",
+        "technologies": ["Python", "MCP", "AI Agents", "REST APIs"],
+        "githubLink": "https://github.com/FranciscoAnnoni/mcp-server-client",
         "projectLink": ""
     },
     {
-        "title": "Django Portal (Foundation)",
-        "description": "The foundation for an internal portal developed in Django (Python) for the remote connection and management of a PostgreSQL database.",
+        "title": "Portal Django",
+        "description": "The foundation for an internal management portal developed in Django (Python) for remote connection and management of a PostgreSQL database.",
         "technologies": ["Python", "Django", "HTML", "CSS", "JavaScript", "PostgreSQL"],
         "githubLink": "https://github.com/FranciscoAnnoni/portalDjango",
         "projectLink": ""
