@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { ButtonColor } from './Components.jsx';
 import { Toggle } from './Components.jsx';
-import { IoMenu,IoClose } from "react-icons/io5";
+import { IoMenu, IoClose, IoSunny, IoMoon } from "react-icons/io5";
 
 
 const NavBar = ({ isChecked, handleChange }) => {
@@ -10,54 +10,52 @@ const NavBar = ({ isChecked, handleChange }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const menuRef = useRef(null); // Referencia para el menú
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setMenuOpen(false); // Cierra el menú si el clic fue fuera del menú
+        setMenuOpen(false);
       }
     };
 
     const handleScroll = () => {
-      setMenuOpen(false); // Cierra el menú si se hace scroll
+      setMenuOpen(false);
     };
 
- 
     if (menuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
-      window.addEventListener("wheel", handleScroll); // Detecta scroll en mouse
-      window.addEventListener("touchmove", handleScroll); // Detecta scroll en móviles
+      window.addEventListener("wheel", handleScroll);
+      window.addEventListener("touchmove", handleScroll);
     } else {
       document.removeEventListener("mousedown", handleClickOutside);
-      window.removeEventListener("wheel", handleScroll); // Detecta scroll en mouse
-      window.removeEventListener("touchmove", handleScroll); // Detecta scroll en móviles
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("touchmove", handleScroll); // Detecta scroll en móviles
+      window.removeEventListener("touchmove", handleScroll);
     };
   }, [menuOpen]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-};
-
-useEffect(() => {
-  const appElement = document.querySelector('.App'); // Selecciona la clase 'App'
-  if (appElement) {
-      if (menuOpen) {
-          appElement.classList.add('app-blurred');
-      } else {
-          appElement.classList.remove('app-blurred');
-      }
-  }
-}, [menuOpen]);
+  };
 
   useEffect(() => {
-    // Desplazarse a la sección correcta al cargar la página
+    const appElement = document.querySelector('.App');
+    if (appElement) {
+      if (menuOpen) {
+        appElement.classList.add('app-blurred');
+      } else {
+        appElement.classList.remove('app-blurred');
+      }
+    }
+  }, [menuOpen]);
+
+  useEffect(() => {
     const hash = window.location.hash;
     if (hash) {
       const section = document.querySelector(hash);
@@ -78,7 +76,7 @@ useEffect(() => {
 
   return (
     <nav className="navbar">
-       <div className="navbar-left">
+      <div className="navbar-left">
         <a href='/#introduction'
           className="logo"
           onMouseEnter={() => setIsHovered(true)}
@@ -142,45 +140,47 @@ useEffect(() => {
 
         <div className='buttonNav'>
           <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
-            <ButtonColor >
+            <ButtonColor>
               Resume
-             </ButtonColor>
+            </ButtonColor>
           </a>
         </div>
       </div>
 
-       <div className='navbar-mobile' ref={menuRef}>
-      <a className="darkLight-icon-mobile">
-            <Toggle isChecked={isChecked} handleChange={handleChange} />
-      </a>
+      <div className='navbar-mobile' ref={menuRef}>
+        <button
+          className="darkLight-icon-mobile theme-icon-btn"
+          onClick={handleChange}
+          aria-label="Toggle theme"
+        >
+          {isChecked ? <IoSunny size={22} /> : <IoMoon size={20} />}
+        </button>
 
-      <div className="navbar-menu-icon" onClick={toggleMenu}>
+        <div className="navbar-menu-icon" onClick={toggleMenu}>
+          <ButtonColor>
+            {menuOpen ? <IoClose size={30} /> : <IoMenu size={30} />}
+          </ButtonColor>
+        </div>
 
-      <ButtonColor >
-      {menuOpen ? <IoClose  size={30}/>: <IoMenu size={30} />}
-      </ButtonColor>
+        <div className={`navbar-menu ${menuOpen ? "open" : "close"}`}>
+          <div className='content-menu'>
+            <ol>
+              <li><a href="#about" onClick={toggleMenu}>About</a></li>
+              <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
+              <li><a href="#work" onClick={toggleMenu}>Work</a></li>
+              <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+            </ol>
+
+            <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
+              <div className='button-menu-phone'>
+                <ButtonColor>
+                  Resume
+                </ButtonColor>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-                <div className={`navbar-menu ${menuOpen ? "open" : "close"}`}>
-                  <div className='content-menu'>
-                  <ol>
-                    <li><a href="#about" onClick={toggleMenu}>About</a></li>
-                    <li><a href="#experience" onClick={toggleMenu}>Experience</a></li>
-                    <li><a href="#work" onClick={toggleMenu}>Work</a></li>
-                    <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
-                 </ol>
-                
-                  <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
-                  <div className='button-menu-phone'>
-                    <ButtonColor >
-                      Resume
-                    </ButtonColor>
-                    </div>
-                  </a>
-                  
-                  </div>
-                </div>
-          
-     </div>       
     </nav>
   );
 };
