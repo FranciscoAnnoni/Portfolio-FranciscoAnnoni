@@ -11,7 +11,7 @@ import Contact from './pages/Contact.jsx';
 //importamos los componentes
 import Navbar from './components/NavBar.jsx'
 import Footer from './components/Footer.jsx';
-import { FollowMouse } from './components/Components.jsx';
+import PrototypeSwitcher from './prototype/PrototypeSwitcher.prototype.jsx';
 
 //los estilos
 import './App.css';
@@ -28,9 +28,6 @@ export const App = () => {
 
   return (
     <>
-         <div className="follow-mouse">
-                <FollowMouse />
-            </div>
         <Navbar isChecked={isDark} handleChange={() => setIsDark(!isDark)} />
         <div className="App">
         <ScrollAnimation>
@@ -55,6 +52,7 @@ export const App = () => {
         
         <Footer />
       </div>
+      {import.meta.env.DEV && <PrototypeSwitcher />}
     </>
   );
 };

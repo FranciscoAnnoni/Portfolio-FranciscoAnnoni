@@ -4,8 +4,14 @@ import { FeaturedProjectCard } from '../components/Components';
 import GithubProyects from '../data/GithubProyects.json';
 import FeaturedProyects from '../data/FeaturedProyects.json';
 import ProjectCardAnimation from '../components/ProjectCardAnimation';
+import { VARIANTS, applyMetrics, useVariant } from '../prototype/portfolioVariants.prototype';
 
 const Work = () => {
+    const variant = useVariant();
+    const v = VARIANTS[variant];
+    const byTitle = (t) => FeaturedProyects.find((p) => p.title === t);
+    const featured = v.featured.map(byTitle).map((p) => applyMetrics(p, variant));
+    const others = [...v.movedToOther.map(byTitle), ...GithubProyects];
     return (
         <section className="Flex work section" id="work">
         <div id="work">
@@ -13,9 +19,9 @@ const Work = () => {
             <h2 className="title-section">Some Things I&apos;ve Built</h2>
           </div>
           <ul className="projects-feautured">
-          {FeaturedProyects.map((project, index) => (
+          {featured.map((project, index) => (
             <ProjectCardAnimation 
-              key={index} 
+              key={variant + project.title} 
               index={index} 
               direction="left"
             >
@@ -35,9 +41,9 @@ const Work = () => {
                 view my GitHub Repository
               </a>
             <ul className="projects-grid">
-            {GithubProyects.map((project, index) => (
+            {others.map((project, index) => (
               <ProjectCardAnimation 
-                key={index} 
+                key={variant + project.title} 
                 index={index % 3} 
                 direction={index % 2 === 0 ? "left" : "right"} 
               >

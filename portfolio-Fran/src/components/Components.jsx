@@ -1,74 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './Components.css'
 import { FaSun, FaMoon } from 'react-icons/fa';
 import { IoSunny } from "react-icons/io5";
-import { FaMouse, FaMousePointer } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { IoFolderOutline } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
-
-//----------------------------------------------------------------------------// Sigue el mouse
-export const FollowMouse = () => {
-  const [enabled, setEnabled] = useState(true);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  // Efecto para seguir el mouse
-  useEffect(() => {
-    const handleMove = (event) => {
-      const { pageX, pageY } = event; // Usa pageX y pageY
-      setPosition({ x: pageX, y: pageY });
-    };
-  
-    if (enabled) {
-      window.addEventListener('pointermove', handleMove);
-    }
-  
-    return () => {
-      window.removeEventListener('pointermove', handleMove);
-    };
-  }, [enabled]);
-
-  // Efecto para cambiar el estilo del cuerpo
-  useEffect(() => {
-    document.body.classList.toggle('no-cursor', enabled);
-
-    return () => {
-      document.body.classList.remove('no-cursor');
-    };
-  }, [enabled]);
-
-  return (
-    <>
-      {/* Cursor personalizable */}
-      <div
-        className="cursor"
-        style={{
-          pointerEvents: 'none',
-          left: -23,
-          top: -23,
-          transform: `translate(${position.x}px, ${position.y}px)`,
-        }}
-      ></div>
-
-      {/* Punto del cursor */}
-      <div
-        className="cursor-dot"
-        style={{
-          pointerEvents: 'none',
-          left: -5,
-          top: -5,
-          transform: `translate(${position.x}px, ${position.y}px) scale(1)`,
-        }}
-      ></div>
-      
-      {/* Botón de toggle con ícono 
-      <button className="toggle-button" onClick={() => setEnabled(!enabled)}>
-        {enabled ? <FaMousePointer /> : <FaMouse />}
-      </button>
-      */}
-    </>
-  );
-};
 
 //----------------------------------------------------------------------------// Toggle de Cambio de Modo Darck a Light
 

@@ -26,19 +26,5 @@
         "technologies": ["TensorFlow", "OpenCV", "Matplotlib", "NumPy"],
         "githubLink": "https://github.com/FranciscoAnnoni/IA",
         "projectLink": ""
-    },
-    {
-        "title": "MCP Server-Client",
-        "description": "A Model Context Protocol (MCP) server-client architecture in Python designed to centralize and dynamically retrieve microservices documentation, enabling AI agents to access up-to-date internal knowledge.",
-        "technologies": ["Python", "MCP", "AI Agents", "REST APIs"],
-        "githubLink": "https://github.com/FranciscoAnnoni/mcp-server-client",
-        "projectLink": ""
-    },
-    {
-        "title": "Portal Django",
-        "description": "The foundation for an internal management portal developed in Django (Python) for remote connection and management of a PostgreSQL database.",
-        "technologies": ["Python", "Django", "HTML", "CSS", "JavaScript", "PostgreSQL"],
-        "githubLink": "https://github.com/FranciscoAnnoni/portalDjango",
-        "projectLink": ""
     }
 ]
