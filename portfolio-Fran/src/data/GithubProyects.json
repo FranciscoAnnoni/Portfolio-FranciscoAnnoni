@@ -36,7 +36,7 @@
     },
     {
         "title": "Korean Character Recognition with AI",
-        "description": "A machine learning project utilizing Convolutional Neural Networks (CNN) to recognize Korean Hangul characters from images.",
+        "description": "A convolutional neural network (CNN) that classifies character images as Korean (Hangul) or Latin, trained on two Kaggle datasets with a grayscale, 250x250 preprocessing pipeline.",
         "technologies": ["TensorFlow", "OpenCV", "Matplotlib", "NumPy"],
         "githubLink": "https://github.com/FranciscoAnnoni/IA",
         "projectLink": ""

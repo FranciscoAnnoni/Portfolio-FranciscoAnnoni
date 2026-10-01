@@ -139,7 +139,7 @@ const NavBar = ({ isChecked, handleChange }) => {
         </ul>
 
         <div className='buttonNav'>
-          <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/CV-FranciscoAnnoni-AI_Engineer.pdf" target="_blank" rel="noopener noreferrer">
             <ButtonColor>
               Resume
             </ButtonColor>
@@ -171,7 +171,7 @@ const NavBar = ({ isChecked, handleChange }) => {
               <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
             </ol>
 
-            <a href="/CV-FranciscoAnnoni-Systems_Engineer.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/CV-FranciscoAnnoni-AI_Engineer.pdf" target="_blank" rel="noopener noreferrer">
               <div className='button-menu-phone'>
                 <ButtonColor>
                   Resume
