@@ -17,6 +17,9 @@ const Introduction = () => {
             <div className="pt-8">
             <p className="Introduction-p">I build web applications and AI-driven solutions, specializing in agentic workflows, LLM integration, and process automation. I focus on precision, adaptability, and collaboration to create systems that scale and solve real-world problems.</p>
             </div>
+            <div className="pt-8">
+            <p className="Introduction-p" style={{ color: 'var(--foreground-color)', fontFamily: 'var(--thirt-family)', fontSize: '14px' }}>Based in Buenos Aires, Argentina (UTC-3) · Full overlap with US working hours · Open to remote roles.</p>
+            </div>
             <a href='#about'>
             <div className="arrow-container">
             <div className="arrow"></div>

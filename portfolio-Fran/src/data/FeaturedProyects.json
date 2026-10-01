@@ -1,27 +1,26 @@
-[    
+[
 {
-    "title": "Tragui",
-    "description": "A Kotlin-based Android application developed using Jetpack Compose, designed to help users find cocktails based on their chosen beverage type, offering an engaging and smooth user experience.",
-    "technologies": ["Kotlin", "Jetpack Compose", "Android Studio", "Git","Cocktails API"],
-    "githubLink": "https://github.com/UTN-FRBA-Mobile/Tragui",
+    "title": "DevEx-MCP",
+    "description": "A Model Context Protocol server I built at Rappi that connects AI agents (Claude, GitHub Copilot, Cursor) to the company's microservices documentation. Agents can search the microservices catalog, compare READMEs and pull exact OpenAPI specs on their own, through a local stdio bridge with token auth, auto-update and a one-command installer.",
+    "technologies": ["Python", "MCP", "FastMCP", "AI Agents", "Docker", "Kubernetes", "pytest"],
+    "githubLink": "https://github.com/FranciscoAnnoni/mcp-server-client",
     "projectLink": "",
-    "imagePath": "../images/tragui.png"
+    "imagePath": "../images/devex-mcp-architecture.png"
 },
 {
-    "title": "OfferHub",
-    "description": "A Kotlin-based Android application that centralizes promotions by collecting offers from banks. Developed using Kotlin, this app allows users to track, filter, and stay up-to-date on personalized promotions all in one place.",
-    "technologies": ["Kotlin", "Android Studio", "Git", "Firebase Database", "MVC Architecture", "Python", "Selenium"],
-    "githubLink": "https://github.com/FranciscoAnnoni/offerHub",
+    "title": "Skynet: n8n Homelab Assistant",
+    "description": "A personal AI assistant on Telegram that understands text and voice notes, chats about anything and manages a to-do list through tool calling. Built as n8n workflows (AI Agent + Postgres memory, Groq LLM and Whisper) running 24/7 on a recycled PC with Docker, exposed only via Tailscale Funnel, with automated backups, self-healing network and Telegram alerts. Zero cost.",
+    "technologies": ["n8n", "AI Agents", "Groq", "Whisper", "PostgreSQL", "Docker", "Tailscale", "Telegram Bot API"],
+    "githubLink": "https://github.com/FranciscoAnnoni/n8n-homelab-assistant",
     "projectLink": "",
-    "imagePath": "../images/offerhub.png"
+    "imagePath": "../images/n8n-homelab-assistant.png"
 },
 {
-        "title": "The Big Walrus",
-  "description": "A React-based Single Page Application designed for selling walrus NFTs. Built on the Solana blockchain, it features a sleek and responsive design for exploring and purchasing unique digital collectibles.",
-"technologies": ["React", "Node.js", "Git", "HTML", "CSS"],
-        "githubLink": "https://github.com/FranciscoAnnoni/big-walrus",
-        "projectLink": "https://www.bigwalrus.empressaria.com.ar/",
-        "imagePath": "../images/bigWalrus.png"
+    "title": "Improvisador",
+    "description": "A public speaking practice web app: spin the deck, get a random topic and talk about it, either improvised or after a deep-research round. A side project built for my social media audience, live at improvisador.lat with 1,000+ monthly users.",
+    "technologies": ["React", "TypeScript", "Vite", "Material UI", "WebGL (OGL)"],
+    "githubLink": "https://github.com/FranciscoAnnoni/improvisador",
+    "projectLink": "https://improvisador.lat/",
+    "imagePath": "../images/improvisador.jpg"
 }
-
 ]

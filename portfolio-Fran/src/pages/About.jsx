@@ -1,9 +1,22 @@
-import { FaPython, FaGitAlt, FaReact, FaNodeJs, FaAws, FaDocker, FaRobot } from 'react-icons/fa';
-import { SiTypescript } from "react-icons/si";
-import { TbBrandKotlin, TbFileTypeSql } from 'react-icons/tb';
+import { FaPython, FaReact, FaNodeJs, FaAws, FaDocker, FaRobot } from 'react-icons/fa';
+import { SiTypescript, SiPostgresql } from "react-icons/si";
+import { TbPlugConnected } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 
 import './Pages.css';
+
+// La grilla se llena por filas (3 columnas)
+const SKILLS = [
+    { name: 'AI Agents & LLM', href: 'https://www.anthropic.com/', icon: <FaRobot color="#7c5cbf" size={30} /> },
+    { name: 'Docker', href: 'https://www.docker.com/', icon: <FaDocker color="#0fa5ff" size={30} /> },
+    { name: 'Node.js', href: 'https://nodejs.org/', icon: <FaNodeJs color="#69ff2e" size={30} /> },
+    { name: 'Python', href: 'https://www.python.org/', icon: <FaPython color="orange" size={30} /> },
+    { name: 'AWS', href: 'https://aws.amazon.com/', icon: <FaAws color="orange" size={30} /> },
+    { name: 'React', href: 'https://reactjs.org/', icon: <FaReact color="cyan" size={30} /> },
+    { name: 'MCP', href: 'https://modelcontextprotocol.io/', icon: <TbPlugConnected color="#ff6347" size={30} /> },
+    { name: 'PostgreSQL', href: 'https://www.postgresql.org/', icon: <SiPostgresql color="#4f8fd1" size={28} /> },
+    { name: 'TypeScript', href: 'https://www.typescriptlang.org/', icon: <SiTypescript color="#3178c6" size={28} /> },
+];
 
 const About = () => {
     // Configuración de animaciones
@@ -94,59 +107,11 @@ const About = () => {
                             className="skills-list tech-item"
                             variants={containerVariants}
                         >
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-
-                                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><FaPython color="orange" size={30} /><span>Python</span></a>
-                            </motion.li>
-                            <motion.li
-                                variants={itemVariants}
-                            >
-
-                                <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"><FaGitAlt color="#ff4c07" size={30} /><span>Git</span></a>
-                            </motion.li>
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-
-                            <a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer"><FaRobot color="#7c5cbf" size={30} /><span>AI Agents & LLM</span></a>
-                            </motion.li>
-                            <motion.li
-                                variants={itemVariants}
-                            >
-
-                             <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer"><SiTypescript color="#3178c6" size={28} /><span>TypeScript</span></a>
-                            </motion.li>
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-
-                            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer"><FaNodeJs color="#69ff2e" size={30} /><span>Node.js</span></a>
-                            </motion.li>
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-
-                                <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><FaReact color="cyan" size={30} /><span>React</span></a>
-                            </motion.li>
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-
-                                <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer"><TbFileTypeSql color="grey" size={30} /><span>SQL & NoSQL</span></a>
-                            </motion.li>
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-
-                                <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer"><FaDocker color="#0fa5ff" size={30} /><span>Docker</span></a>
-                            </motion.li>
-                            <motion.li 
-                                variants={itemVariants}
-                            >
-                                <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><FaAws color="orange" size={30} /><span>AWS</span></a>
-                            </motion.li>
+                            {SKILLS.map(({ name, href, icon }) => (
+                                <motion.li key={name} variants={itemVariants}>
+                                    <a href={href} target="_blank" rel="noopener noreferrer">{icon}<span>{name}</span></a>
+                                </motion.li>
+                            ))}
                         </motion.ul>
                     </motion.div>
                     <motion.div 

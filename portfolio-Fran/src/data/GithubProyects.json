@@ -1,5 +1,19 @@
 [
      {
+        "title": "Tragui",
+        "description": "A Kotlin-based Android application developed using Jetpack Compose, designed to help users find cocktails based on their chosen beverage type, offering an engaging and smooth user experience.",
+        "technologies": ["Kotlin", "Jetpack Compose", "Android Studio", "Git","Cocktails API"],
+        "githubLink": "https://github.com/UTN-FRBA-Mobile/Tragui",
+        "projectLink": ""
+    },
+     {
+        "title": "OfferHub",
+        "description": "A Kotlin-based Android application that centralizes promotions by collecting offers from banks. Developed using Kotlin, this app allows users to track, filter, and stay up-to-date on personalized promotions all in one place.",
+        "technologies": ["Kotlin", "Android Studio", "Git", "Firebase Database", "MVC Architecture", "Python", "Selenium"],
+        "githubLink": "https://github.com/FranciscoAnnoni/offerHub",
+        "projectLink": ""
+    },
+     {
         "title": "WriteDreams",
         "description": "WriteDreams is a minimalistic web app for sharing creative ideas (apps, books, films, etc.) without requiring registration. Users can submit one idea every 24 hours, browse and vote for rated ideas, while unrated ideas remain hidden.",
         "technologies": ["TypeScript", "JavaScript", "React", "Vite", "Material UI", "local-storage", "HTML", "CSS"],
@@ -25,20 +39,6 @@
         "description": "A machine learning project utilizing Convolutional Neural Networks (CNN) to recognize Korean Hangul characters from images.",
         "technologies": ["TensorFlow", "OpenCV", "Matplotlib", "NumPy"],
         "githubLink": "https://github.com/FranciscoAnnoni/IA",
-        "projectLink": ""
-    },
-    {
-        "title": "MCP Server-Client",
-        "description": "A Model Context Protocol (MCP) server-client architecture in Python designed to centralize and dynamically retrieve microservices documentation, enabling AI agents to access up-to-date internal knowledge.",
-        "technologies": ["Python", "MCP", "AI Agents", "REST APIs"],
-        "githubLink": "https://github.com/FranciscoAnnoni/mcp-server-client",
-        "projectLink": ""
-    },
-    {
-        "title": "Portal Django",
-        "description": "The foundation for an internal management portal developed in Django (Python) for remote connection and management of a PostgreSQL database.",
-        "technologies": ["Python", "Django", "HTML", "CSS", "JavaScript", "PostgreSQL"],
-        "githubLink": "https://github.com/FranciscoAnnoni/portalDjango",
         "projectLink": ""
     }
 ]

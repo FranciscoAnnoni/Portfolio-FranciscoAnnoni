@@ -423,8 +423,12 @@ section {
   }
   
   .kNIdQM ul.skills-list {
-    grid-template-columns: repeat(3, minmax(90px, 1fr));
+    grid-template-columns: 1fr 1fr 1.2fr;
     gap: 5px 6px;
+  }
+
+  .tech-item a {
+    gap: 8px;
   }
   
   /* Contact section */
