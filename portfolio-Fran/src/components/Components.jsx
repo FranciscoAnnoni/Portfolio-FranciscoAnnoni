@@ -131,7 +131,7 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
   const link = projectLink && projectLink.trim() !== "" ? projectLink : githubLink;
 
   return (
-    <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4" onClick={(e) => handleProjectCardClick(e, githubLink)} style={{ cursor: 'pointer' }}>
+    <li className="featured__StyledProject-ywnbqt-1 gvznfB" data-sr-id="4" onClick={(e) => handleProjectCardClick(e, githubLink || projectLink)} style={{ cursor: 'pointer' }}>
       <div className="project-content">
         <div className="project-text">
           <p className="project-overline">Featured Project</p>
@@ -157,9 +157,11 @@ export const FeaturedProjectCard = ({ title, description, technologies, githubLi
           </ul>
         
         <div className="project-links-feature" style={{ position: 'relative', zIndex: 10 }}>
+          {githubLink && (
           <a href={githubLink} aria-label="GitHub Link" rel="noopener noreferrer" target="_blank">
             <FaGithub />
           </a>
+          )}
           {projectLink && projectLink.trim() !== "" && (
                           <a href={projectLink} aria-label="External Link" className="external" target="_blank" rel="noopener noreferrer">
                             <FiExternalLink />

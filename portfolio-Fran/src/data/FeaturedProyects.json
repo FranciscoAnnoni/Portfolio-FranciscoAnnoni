@@ -19,7 +19,7 @@
     "title": "Improvisador",
     "description": "A public speaking practice web app: spin the deck, get a random topic and talk about it, either improvised or after a deep-research round. A side project built for my social media audience, live at improvisador.lat with 1,000+ monthly users.",
     "technologies": ["React", "TypeScript", "Vite", "Material UI", "WebGL (OGL)"],
-    "githubLink": "https://github.com/FranciscoAnnoni/improvisador",
+    "githubLink": "",
     "projectLink": "https://improvisador.lat/",
     "imagePath": "../images/improvisador.jpg"
 }
